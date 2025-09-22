@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio BTS SIO SLAM - Thème Cinéma</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <i class="fas fa-film nav-icon"></i>
+                <span class="nav-title">Portfolio SIO</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#hero" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#techwatch" class="nav-link">Veille</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#cv" class="nav-link">CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title animate-fade-in">
+                    <span class="gradient-text">Développeur</span>
+                    <br>
+                    <span class="text-white">Full Stack</span>
+                </h1>
+                <div class="hero-divider"></div>
+                <p class="hero-description animate-fade-in-delay">
+                    Étudiant en BTS SIO SLAM passionné par le développement web et les nouvelles technologies.
+                    <br>
+                    Créateur d'expériences numériques innovantes et performantes.
+                </p>
+                
+                <div class="hero-badges animate-fade-in-delay-2">
+                    <div class="badge">
+                        <i class="fas fa-code"></i>
+                        <span>Frontend</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-database"></i>
+                        <span>Backend</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-globe"></i>
+                        <span>Web Apps</span>
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary animate-fade-in-delay-3" onclick="scrollToSection('projects')">
+                    Découvrir mes projets
+                </button>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator" onclick="scrollToSection('projects')">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="gradient-text">Mes Projets</span>
+                </h2>
+                <p class="section-description">
+                    Une sélection de mes réalisations techniques développées pendant ma formation
+                </p>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800" alt="E-Commerce">
+                        <div class="project-overlay">
+                            <div class="project-category">Full Stack</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <i class="fas fa-calendar"></i>
+                            <span>2024</span>
+                        </div>
+                        <h3 class="project-title">Application E-Commerce</h3>
+                        <p class="project-description">
+                            Plateforme de vente en ligne complète avec gestion des utilisateurs, panier, et système de paiement. Interface moderne et responsive.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">
+                                <i class="fas fa-tag"></i>
+                                React
+                            </span>
+                            <span class="tech-tag">
+                                <i class="fas fa-tag"></i>
+                                Node.js
+                            </span>
+                            <span class="tech-tag">
+                                <i class="fas fa-tag"></i>
+                                MongoDB
+                            </span>
+                            <span class="tech-tag">
+                                <i class="fas fa-tag"></i>
+                                Stripe
+                            </span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-secondary">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                Démo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800" alt="API REST">
+                        <div class="project-overlay">
+                            <div class="project-category">Backend</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <i class="fas fa-calendar"></i>
+                            <span>2024</span>
+                        </div>
+                        <h3 class="project-title">API REST Gestion de Tâches</h3>
+                        <p class="project-description">
+                            API robuste pour la gestion de projets avec authentification JWT, CRUD complet et documentation Swagger.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">
+                                <i class="fas fa-tag"></i>
+                                PHP
+                            </span>
+                            <span class="tech-tag">
+                                <i class="fas fa-tag"></i>
+                                MySQL
+                            </span>
+                            <span class="tech-tag">
+                                <i class="fas fa-tag"></i>
+                                JWT
+                            </span>
+                            <span class="tech-tag">
+                                <i class="fas fa-tag"></i>
+                                Swagger
+                            </span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-secondary">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                Démo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Dashboard">
+                        <div class="project-overlay">
+                            <div class="project-category">Frontend</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <i class="fas fa-calendar"></i>
+                            <span>2023</span>
+                        </div>
+                        <h3 class="project-title">Dashboard Analytics</h3>
+                        <p class="project-description">
+                            Interface de visualisation de données avec graphiques interactifs et tableau de bord en temps réel.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">
+                                <i class="fas fa-tag"></i>
+                                Vue.js
+                            </span>
+                            <span class="tech-tag">
+                                <i class="fas fa-tag"></i>
+                                Chart.js
+                            </span>
+                            <span class="tech-tag">
+                                <i class="fas fa-tag"></i>
+                                Firebase
+                            </span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-secondary">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                Démo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800" alt="App Mobile">
+                        <div class="project-overlay">
+                            <div class="project-category">Mobile</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <i class="fas fa-calendar"></i>
+                            <span>2023</span>
+                        </div>
+                        <h3 class="project-title">Application Mobile Météo</h3>
+                        <p class="project-description">
+                            App mobile cross-platform avec géolocalisation, prévisions détaillées et interface intuitive.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">
+                                <i class="fas fa-tag"></i>
+                                React Native
+                            </span>
+                            <span class="tech-tag">
+                                <i class="fas fa-tag"></i>
+                                API REST
+                            </span>
+                            <span class="tech-tag">
+                                <i class="fas fa-tag"></i>
+                                Redux
+                            </span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-secondary">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                Démo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Watch Section -->
+    <section id="techwatch" class="techwatch">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="gradient-text">Veille Technologique</span>
+                </h2>
+                <p class="section-description">
+                    Suivi des dernières tendances et innovations dans le domaine du développement
+                </p>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-category="all">Toutes</button>
+                <button class="filter-tab" data-category="ai">IA & Développement</button>
+                <button class="filter-tab" data-category="framework">Framework</button>
+                <button class="filter-tab" data-category="security">Sécurité</button>
+                <button class="filter-tab" data-category="devops">DevOps</button>
+            </div>
+            
+            <div class="articles-grid">
+                <article class="article-card" data-category="ai">
+                    <div class="article-image">
+                        <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600" alt="IA">
+                        <div class="article-overlay">
+                            <div class="article-category">IA & Développement</div>
+                            <div class="article-read-time">5 min</div>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <div class="article-date">
+                                <i class="fas fa-calendar"></i>
+                                15 janvier 2024
+                            </div>
+                            <div class="article-source">
+                                <i class="fas fa-trending-up"></i>
+                                TechCrunch
+                            </div>
+                        </div>
+                        <h3 class="article-title">L'essor de l'Intelligence Artificielle dans le développement web</h3>
+                        <p class="article-summary">
+                            Comment l'IA révolutionne les pratiques de développement avec des outils comme GitHub Copilot et ChatGPT.
+                        </p>
+                        <div class="article-actions">
+                            <button class="btn-bookmark">
+                                <i class="fas fa-bookmark"></i>
+                                Sauvegarder
+                            </button>
+                            <a href="#" class="btn btn-primary">
+                                Lire l'article
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="article-card" data-category="framework">
+                    <div class="article-image">
+                        <img src="https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=600" alt="React">
+                        <div class="article-overlay">
+                            <div class="article-category">Framework</div>
+                            <div class="article-read-time">7 min</div>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <div class="article-date">
+                                <i class="fas fa-calendar"></i>
+                                10 janvier 2024
+                            </div>
+                            <div class="article-source">
+                                <i class="fas fa-trending-up"></i>
+                                React Blog
+                            </div>
+                        </div>
+                        <h3 class="article-title">React 18 et les nouvelles fonctionnalités de concurrent rendering</h3>
+                        <p class="article-summary">
+                            Analyse des Suspense, Server Components et des améliorations de performance apportées par React 18.
+                        </p>
+                        <div class="article-actions">
+                            <button class="btn-bookmark">
+                                <i class="fas fa-bookmark"></i>
+                                Sauvegarder
+                            </button>
+                            <a href="#" class="btn btn-primary">
+                                Lire l'article
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="article-card" data-category="security">
+                    <div class="article-image">
+                        <img src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sécurité">
+                        <div class="article-overlay">
+                            <div class="article-category">Sécurité</div>
+                            <div class="article-read-time">6 min</div>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <div class="article-date">
+                                <i class="fas fa-calendar"></i>
+                                5 janvier 2024
+                            </div>
+                            <div class="article-source">
+                                <i class="fas fa-trending-up"></i>
+                                OWASP
+                            </div>
+                        </div>
+                        <h3 class="article-title">Cybersécurité : Les nouvelles menaces pour les applications web</h3>
+                        <p class="article-summary">
+                            Tour d'horizon des vulnérabilités émergentes et des meilleures pratiques de sécurisation en 2024.
+                        </p>
+                        <div class="article-actions">
+                            <button class="btn-bookmark">
+                                <i class="fas fa-bookmark"></i>
+                                Sauvegarder
+                            </button>
+                            <a href="#" class="btn btn-primary">
+                                Lire l'article
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="article-card" data-category="devops">
+                    <div class="article-image">
+                        <img src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=600" alt="DevOps">
+                        <div class="article-overlay">
+                            <div class="article-category">DevOps</div>
+                            <div class="article-read-time">8 min</div>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <div class="article-date">
+                                <i class="fas fa-calendar"></i>
+                                28 décembre 2023
+                            </div>
+                            <div class="article-source">
+                                <i class="fas fa-trending-up"></i>
+                                Cloud Native Foundation
+                            </div>
+                        </div>
+                        <h3 class="article-title">DevOps et Cloud Native : L'évolution des architectures</h3>
+                        <p class="article-summary">
+                            Kubernetes, Docker, et les microservices : comment s'adapter aux nouvelles architectures cloud.
+                        </p>
+                        <div class="article-actions">
+                            <button class="btn-bookmark">
+                                <i class="fas fa-bookmark"></i>
+                                Sauvegarder
+                            </button>
+                            <a href="#" class="btn btn-primary">
+                                Lire l'article
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="techwatch-footer">
+                <p class="techwatch-note">
+                    Cette veille technologique est mise à jour régulièrement pour rester à la pointe des innovations.
+                </p>
+                <button class="btn btn-secondary">Voir tous les articles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv" class="cv">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="gradient-text">Mon CV</span>
+                </h2>
+                <p class="section-description">
+                    Parcours, compétences et expériences en développement logiciel
+                </p>
+                <button class="btn btn-primary download-cv" onclick="downloadCV()">
+                    <i class="fas fa-download"></i>
+                    Télécharger mon CV (PDF)
+                </button>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="cv-grid">
+                <div class="cv-card">
+                    <div class="cv-card-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Compétences Techniques</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PHP</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">React</span>
+                                <span class="skill-level">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">MySQL</span>
+                                <span class="skill-level">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-level">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">CSS/Sass</span>
+                                <span class="skill-level">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cv-card">
+                    <div class="cv-card-header">
+                        <i class="fas fa-award"></i>
+                        <h3>Profil</h3>
+                    </div>
+                    <div class="profile-content">
+                        <div class="profile-section">
+                            <h4>À propos</h4>
+                            <p>Étudiant passionné en BTS SIO SLAM avec une forte motivation pour le développement web et mobile. Toujours à la recherche de nouveaux défis techniques.</p>
+                        </div>
+                        <div class="profile-section">
+                            <h4>Langues</h4>
+                            <ul>
+                                <li>• Français (Natif)</li>
+                                <li>• Anglais (Niveau B2)</li>
+                                <li>• Espagnol (Notions)</li>
+                            </ul>
+                        </div>
+                        <div class="profile-section">
+                            <h4>Centres d'intérêt</h4>
+                            <ul>
+                                <li>• Cinéma et séries</li>
+                                <li>• Technologies émergentes</li>
+                                <li>• Gaming et e-sport</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cv-card">
+                    <div class="cv-card-header">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Expériences</h3>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Développeur Web - Stage</h4>
+                                <p class="timeline-company">Entreprise XYZ</p>
+                                <p class="timeline-period">Juin 2024 - Août 2024</p>
+                                <p class="timeline-description">Développement d'une application web de gestion commerciale avec PHP/MySQL.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Projet Freelance</h4>
+                                <p class="timeline-company">Client particulier</p>
+                                <p class="timeline-period">Mars 2024 - Mai 2024</p>
+                                <p class="timeline-description">Création d'un site vitrine responsive avec système de réservation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cv-card">
+                    <div class="cv-card-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Formation</h3>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>BTS SIO SLAM</h4>
+                                <p class="timeline-company">Lycée Technique</p>
+                                <p class="timeline-period">2023 - 2025</p>
+                                <p class="timeline-description">Solutions Logicielles et Applications Métiers</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Baccalauréat STI2D</h4>
+                                <p class="timeline-company">Lycée Général</p>
+                                <p class="timeline-period">2020 - 2023</p>
+                                <p class="timeline-description">Spécialité Systèmes d'Information et Numérique</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="gradient-text">Contactez-moi</span>
+                </h2>
+                <p class="section-description">
+                    Prêt à collaborer sur votre prochain projet ? N'hésitez pas à me contacter
+                </p>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-intro">
+                        <h3>Restons en contact</h3>
+                        <p>Que ce soit pour un stage, un projet collaboratif ou simplement pour échanger sur les technologies, je suis toujours ravi de discuter avec des personnes passionnées par le développement.</p>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>votre.email@example.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Téléphone</h4>
+                                <p>+33 6 XX XX XX XX</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Localisation</h4>
+                                <p>Votre ville, France</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h4>Suivez-moi</h4>
+                        <div class="social-icons">
+                            <a href="https://github.com/votre-username" target="_blank" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/votre-profile" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h3>Envoyez-moi un message</h3>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Prénom</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Nom</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <p>&copy; 2024 Portfolio BTS SIO SLAM. Tous droits réservés.</p>
+                    <p class="footer-subtitle">Développé avec passion et les dernières technologies web</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
