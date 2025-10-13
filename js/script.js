@@ -191,8 +191,8 @@ function showNotification(message, type = 'info') {
 function downloadCV() {
     // Create a temporary link element
     const link = document.createElement('a');
-    link.href = 'CV AOUZAL-Jawad.pdf'; // Make sure to place your CV file in the root directory
-    link.download = 'CV AOUZAL-Jawad.pdf'; // Replace with your actual name
+    link.href = 'cv.pdf'; // Make sure to place your CV file in the root directory
+    link.download = 'CV_Nom_Prenom.pdf'; // Replace with your actual name
     
     // Check if file exists
     fetch(link.href)
