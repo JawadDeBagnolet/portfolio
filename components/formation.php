@@ -7,7 +7,8 @@ $formations = [
         'description' => 'Spécialisation Solutions Logicielles et Applications Métiers',
         'skills' => [
             'Développement d\'applications',
-            'Bases de données',
+            'Développement web',
+            'Gestion de bases de données',
             'Architecture logicielle',
             'Gestion de projet',
         ],
@@ -15,9 +16,9 @@ $formations = [
     [
         'degree' => 'Baccalauréat',
         'school' => 'Enseignement Général',
-        'period' => '2023',
+        'period' => '2021 - 2024',
         'description' => 'Formation générale avec spécialisation scientifique',
-        'skills' => ['Mathématiques', 'Sciences', 'Informatique'],
+        'skills' => ['Mathématiques' , 'Physique - Chimie'],
     ],
 ];
 ?>
