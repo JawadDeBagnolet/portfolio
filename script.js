@@ -422,26 +422,11 @@ function addSkillBarAnimations() {
 
 // CV download functionality
 function addCVDownloadFunctionality() {
-    const cvButton = document.querySelector('.btn-secondary');
-    if (cvButton) {
-        cvButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Check if CV file exists
-            const cvPath = 'CV AOUZAL-Jawad.pdf';
-            const link = document.createElement('a');
-            link.href = cvPath;
-            link.download = 'CV_AOUZAL_Jawad.pdf';
-            
-            // Try to download
-            try {
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                showNotification('Téléchargement du CV en cours...', 'success');
-            } catch (error) {
-                showNotification('Erreur lors du téléchargement du CV.', 'error');
-            }
+    const cvLink = document.querySelector('a[href="CV AOUZAL-Jawad.pdf"]');
+    if (cvLink) {
+        cvLink.addEventListener('click', function(e) {
+            // Let the default download behavior work
+            showNotification('Téléchargement du CV en cours...', 'success');
         });
     }
 }
