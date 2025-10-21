@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Développeur Full Stack</title>
+    <title>Portfolio - Aouzal Jawad</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -13,1429 +13,1423 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
-        <!-- Navigation -->
-        <nav class="nav" id="navigation">
-            <div class="nav-container">
-                <div class="nav-content">
-                    <div class="logo">
-                        Portfolio
-                    </div>
-
-                    <div class="nav-items">
-                        <button class="nav-item" onclick="scrollToSection('#hero')">Accueil</button>
-                        <button class="nav-item" onclick="scrollToSection('#about')">À propos</button>
-                        <button class="nav-item" onclick="scrollToSection('#formation')">Formation</button>
-                        <button class="nav-item" onclick="scrollToSection('#projects')">Projets</button>
-                        <button class="nav-item" onclick="scrollToSection('#skills')">Compétences</button>
-                        <button class="nav-item" onclick="scrollToSection('#techwatch')">Veille</button>
-                        <button class="nav-item" onclick="scrollToSection('#cv')">CV</button>
-                        <button class="nav-item" onclick="scrollToSection('#contact')">Contact</button>
-                    </div>
-
-                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                        <i class="fas fa-bars" id="menu-icon"></i>
-                    </button>
+<div class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="nav" id="navigation">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="logo">
+                    Portfolio
                 </div>
+
+                <div class="nav-items">
+                    <button class="nav-item" onclick="scrollToSection('#hero')">Accueil</button>
+                    <button class="nav-item" onclick="scrollToSection('#about')">À propos</button>
+                    <button class="nav-item" onclick="scrollToSection('#formation')">Formation</button>
+                    <button class="nav-item" onclick="scrollToSection('#projects')">Projets</button>
+                    <button class="nav-item" onclick="scrollToSection('#skills')">Compétences</button>
+                    <button class="nav-item" onclick="scrollToSection('#techwatch')">Veille</button>
+                    <button class="nav-item" onclick="scrollToSection('#cv')">CV</button>
+                    <button class="nav-item" onclick="scrollToSection('#contact')">Contact</button>
+                </div>
+
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-content">
+                <button class="mobile-nav-item" onclick="scrollToSection('#hero')">Accueil</button>
+                <button class="mobile-nav-item" onclick="scrollToSection('#about')">À propos</button>
+                <button class="mobile-nav-item" onclick="scrollToSection('#formation')">Formation</button>
+                <button class="mobile-nav-item" onclick="scrollToSection('#projects')">Projets</button>
+                <button class="mobile-nav-item" onclick="scrollToSection('#skills')">Compétences</button>
+                <button class="mobile-nav-item" onclick="scrollToSection('#techwatch')">Veille</button>
+                <button class="mobile-nav-item" onclick="scrollToSection('#cv')">CV</button>
+                <button class="mobile-nav-item" onclick="scrollToSection('#contact')">Contact</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="animate-fade-in">
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 gradient-text">
+                    Développeur Full Stack
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-2">
+                    Étudiant BTS SIO SLAM
+                </p>
+                <p class="text-lg text-gray-400">
+                    Passionné par le développement web et les technologies modernes
+                </p>
             </div>
 
-            <div class="mobile-menu" id="mobile-menu">
-                <div class="mobile-menu-content">
-                    <button class="mobile-nav-item" onclick="scrollToSection('#hero')">Accueil</button>
-                    <button class="mobile-nav-item" onclick="scrollToSection('#about')">À propos</button>
-                    <button class="mobile-nav-item" onclick="scrollToSection('#formation')">Formation</button>
-                    <button class="mobile-nav-item" onclick="scrollToSection('#projects')">Projets</button>
-                    <button class="mobile-nav-item" onclick="scrollToSection('#skills')">Compétences</button>
-                    <button class="mobile-nav-item" onclick="scrollToSection('#techwatch')">Veille</button>
-                    <button class="mobile-nav-item" onclick="scrollToSection('#cv')">CV</button>
-                    <button class="mobile-nav-item" onclick="scrollToSection('#contact')">Contact</button>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                <div class="card">
+                    <i class="fas fa-code icon-xl text-blue-400 mb-4" style="display: block; text-align: center;"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Frontend</h3>
+                    <p class="text-gray-400 text-center">React, Vue.js, HTML/CSS, JavaScript</p>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-database icon-xl text-purple-400 mb-4" style="display: block; text-align: center;"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Backend</h3>
+                    <p class="text-gray-400 text-center">Node.js, PHP, Symfony, SQL</p>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-mobile-alt icon-xl text-pink-400 mb-4" style="display: block; text-align: center;"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Applications</h3>
+                    <p class="text-gray-400 text-center">Java, JavaFX</p>
                 </div>
             </div>
-        </nav>
+        </div>
+    </section>
 
-        <!-- Hero Section -->
-        <section id="hero" class="hero">
-            <div class="container">
-                <div class="animate-fade-in">
-                    <h1 class="text-5xl md:text-7xl font-bold mb-4 gradient-text">
-                        Développeur Full Stack
-                    </h1>
-                    <p class="text-xl md:text-2xl text-gray-300 mb-2">
-                        Étudiant BTS SIO SLAM
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">
+                À Propos de moi
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <i class="fas fa-user icon-lg text-blue-400 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-4">Profil Professionnel</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Étudiant en BTS SIO option SLAM (Solutions Logicielles et Applications Métiers),
+                        je suis passionné par le développement web et la création d'applications innovantes.
                     </p>
-                    <p class="text-lg text-gray-400">
-                        Passionné par le développement web et les technologies modernes
+                    <p class="text-gray-300 leading-relaxed">
+                        Je me spécialise dans le développement Full Stack avec une .
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-                    <div class="card">
-                        <i class="fas fa-code icon-xl text-blue-400 mb-4" style="display: block; text-align: center;"></i>
-                        <h3 class="text-xl font-semibold mb-2 text-center">Frontend</h3>
-                        <p class="text-gray-400 text-center">React, Vue.js, HTML/CSS, JavaScript</p>
-                    </div>
-
-                    <div class="card">
-                        <i class="fas fa-database icon-xl text-purple-400 mb-4" style="display: block; text-align: center;"></i>
-                        <h3 class="text-xl font-semibold mb-2 text-center">Backend</h3>
-                        <p class="text-gray-400 text-center">Node.js, PHP, Symfony, Java</p>
-                    </div>
-
-                    <div class="card">
-                        <i class="fas fa-mobile-alt icon-xl text-pink-400 mb-4" style="display: block; text-align: center;"></i>
-                        <h3 class="text-xl font-semibold mb-2 text-center">Applications Web</h3>
-                        <p class="text-gray-400 text-center">Applications modernes et responsives</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="section">
-            <div class="container">
-                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">
-                    À Propos
-                </h2>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="card">
-                        <i class="fas fa-user icon-lg text-blue-400 mb-4"></i>
-                        <h3 class="text-2xl font-semibold mb-4">Profil Professionnel</h3>
-                        <p class="text-gray-300 leading-relaxed mb-4">
-                            Étudiant en BTS SIO option SLAM (Solutions Logicielles et Applications Métiers),
-                            je suis passionné par le développement web et la création d'applications innovantes.
-                        </p>
-                        <p class="text-gray-300 leading-relaxed">
-                            Je me spécialise dans le développement Full Stack avec une expertise particulière
-                            en Symfony, PHP, React et les technologies modernes du web.
+                <div class="space-y-6">
+                    <div class="card-sm">
+                        <i class="fas fa-bullseye icon text-purple-400 mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-2">Objectifs</h3>
+                        <p class="text-gray-300">
+                            Développer des applications ou sites web pour proposer d'innovantes
+                            solutions aux besoins des utilisateurs.
                         </p>
                     </div>
 
-                    <div class="space-y-6">
-                        <div class="card-sm">
-                            <i class="fas fa-bullseye icon text-purple-400 mb-3"></i>
-                            <h3 class="text-xl font-semibold mb-2">Objectifs</h3>
-                            <p class="text-gray-300">
-                                Développer des applications web performantes et créer des solutions
-                                innovantes qui répondent aux besoins des utilisateurs.
-                            </p>
-                        </div>
-
-                        <div class="card-sm">
-                            <i class="fas fa-lightbulb icon text-pink-400 mb-3"></i>
-                            <h3 class="text-xl font-semibold mb-2">Passion</h3>
-                            <p class="text-gray-300">
-                                Veille technologique constante, apprentissage des nouvelles technologies
-                                et contribution à des projets open source.
-                            </p>
-                        </div>
+                    <div class="card-sm">
+                        <i class="fas fa-lightbulb icon text-pink-400 mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-2">Passion</h3>
+                        <p class="text-gray-300">
+                            Veille technologique constante, apprentissage des nouvelles technologies.
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Formation Section -->
-        <section id="formation" class="section section-bg">
-            <div class="container">
-                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">
-                    Formation
-                </h2>
+    <!-- Formation Section -->
+    <section id="formation" class="section section-bg">
+        <div class="container">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">
+                Formation
+            </h2>
 
-                <div class="space-y-8">
-                    <div class="card">
-                        <div class="flex flex-col md:flex md:flex-row md:items-start md:justify-between mb-4">
-                            <div class="flex items-start space-x-4 mb-4 md:mb-0">
-                                <i class="fas fa-graduation-cap icon text-blue-400 flex-shrink-0 mt-1"></i>
-                                <div>
-                                    <h3 class="text-2xl font-semibold text-white mb-1">
-                                        BTS SIO SLAM
-                                    </h3>
-                                    <p class="text-gray-300">Services Informatiques aux Organisations</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-2 text-gray-400">
-                                <i class="fas fa-calendar icon"></i>
-                                <span>2024 - 2026</span>
+            <div class="space-y-8">
+                <div class="card">
+                    <div class="flex flex-col md:flex md:flex-row md:items-start md:justify-between mb-4">
+                        <div class="flex items-start space-x-4 mb-4 md:mb-0">
+                            <i class="fas fa-graduation-cap icon text-blue-400 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h3 class="text-2xl font-semibold text-white mb-1">
+                                    BTS SIO SLAM
+                                </h3>
+                                <p class="text-gray-300">Services Informatiques aux Organisations</p>
                             </div>
                         </div>
+                        <div class="flex items-center space-x-2 text-gray-400">
+                            <i class="fas fa-calendar icon"></i>
+                            <span>2024 - 2026</span>
+                        </div>
+                    </div>
 
-                        <p class="text-gray-300 mb-4">Spécialisation Solutions Logicielles et Applications Métiers</p>
+                    <p class="text-gray-300 mb-4">Spécialisation Solutions Logicielles et Applications Métiers</p>
 
-                        <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-2">
                             <span class="tag tag-blue">
                                 Développement d'applications
                             </span>
-                            <span class="tag tag-blue">
+                        <span class="tag tag-blue">
                                 Développement web
                             </span>
-                            <span class="tag tag-blue">
+                        <span class="tag tag-blue">
                                 Gestion de bases de données
                             </span>
-                            <span class="tag tag-blue">
+                        <span class="tag tag-blue">
                                 Architecture logicielle
                             </span>
-                            <span class="tag tag-blue">
+                        <span class="tag tag-blue">
                                 Gestion de projet
                             </span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="flex flex-col md:flex md:flex-row md:items-start md:justify-between mb-4">
+                        <div class="flex items-start space-x-4 mb-4 md:mb-0">
+                            <i class="fas fa-graduation-cap icon text-blue-400 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h3 class="text-2xl font-semibold text-white mb-1">
+                                    Baccalauréat
+                                </h3>
+                                <p class="text-gray-300">Enseignement Général</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2 text-gray-400">
+                            <i class="fas fa-calendar icon"></i>
+                            <span>2021 - 2024</span>
                         </div>
                     </div>
 
-                    <div class="card">
-                        <div class="flex flex-col md:flex md:flex-row md:items-start md:justify-between mb-4">
-                            <div class="flex items-start space-x-4 mb-4 md:mb-0">
-                                <i class="fas fa-graduation-cap icon text-blue-400 flex-shrink-0 mt-1"></i>
-                                <div>
-                                    <h3 class="text-2xl font-semibold text-white mb-1">
-                                        Baccalauréat
-                                    </h3>
-                                    <p class="text-gray-300">Enseignement Général</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-2 text-gray-400">
-                                <i class="fas fa-calendar icon"></i>
-                                <span>2021 - 2024</span>
-                            </div>
-                        </div>
+                    <p class="text-gray-300 mb-4">Formation générale avec spécialisation scientifique</p>
 
-                        <p class="text-gray-300 mb-4">Formation générale avec spécialisation scientifique</p>
-
-                        <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-2">
                             <span class="tag tag-blue">
                                 Mathématiques
                             </span>
-                            <span class="tag tag-blue">
+                        <span class="tag tag-blue">
                                 Physique - Chimie
                             </span>
-                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="section">
-            <div class="container-lg">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text">
-                    Projets
-                </h2>
-                <p class="text-center text-gray-400 mb-12 text-lg">
-                    Une sélection de mes réalisations et projets académiques
-                </p>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container-lg">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text">
+                Projets
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">
+                Une sélection de mes réalisations et projets académiques
+            </p>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Site de Gestion de Cinéma">
-                            <div class="project-year">
-                                2024
-                            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Site de Gestion de Cinéma">
+                        <div class="project-year">
+                            2024
                         </div>
+                    </div>
 
-                        <div class="project-content">
-                            <div class="flex items-center justify-between mb-3">
+                    <div class="project-content">
+                        <div class="flex items-center justify-between mb-3">
                                 <span class="project-category">
                                     Full Stack
                                 </span>
-                            </div>
+                        </div>
 
-                            <h3 class="project-title">
-                                Site de Gestion de Cinéma
-                            </h3>
+                        <h3 class="project-title">
+                            Site de Gestion de Cinéma
+                        </h3>
 
-                            <p class="project-description">
-                                Application complète de gestion de cinéma avec réservations en ligne
-                            </p>
+                        <p class="project-description">
+                            Application complète de gestion de cinéma avec réservations en ligne
+                        </p>
 
-                            <div class="project-tech">
-                                <span class="tech-tag">
-                                    Symfony
-                                </span>
-                                <span class="tech-tag">
+                        <div class="project-tech">
+                            <span class="tech-tag">
                                     PHP
                                 </span>
-                                <span class="tech-tag">
+                            <span class="tech-tag">
+                                    JavaScript
+                                </span>
+                            <span class="tech-tag">
+                                    HTML/CSS
+                                </span>
+                            <span class="tech-tag">
                                     MySQL
                                 </span>
-                                <span class="tech-tag">
+                            <span class="tech-tag">
                                     Bootstrap
                                 </span>
-                            </div>
+                        </div>
 
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                    <span>Code</span>
-                                </a>
-                                <a href="#" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Demo</span>
-                                </a>
-                            </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ollo25/cinema_projet_A_B_L_O" class="project-link">
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Gestion de Vols">
+                        <div class="project-year">
+                            2024
                         </div>
                     </div>
 
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Gestion de Vols">
-                            <div class="project-year">
-                                2024
-                            </div>
-                        </div>
-
-                        <div class="project-content">
-                            <div class="flex items-center justify-between mb-3">
+                    <div class="project-content">
+                        <div class="flex items-center justify-between mb-3">
                                 <span class="project-category">
                                     Backend
                                 </span>
-                            </div>
+                        </div>
 
-                            <h3 class="project-title">
-                                Gestion de Vols
-                            </h3>
+                        <h3 class="project-title">
+                            Gestion de Vols
+                        </h3>
 
-                            <p class="project-description">
-                                Système de gestion et réservation de vols avec API REST
-                            </p>
+                        <p class="project-description">
+                            Système de gestion et réservation de vols avec API REST
+                        </p>
 
-                            <div class="project-tech">
+                        <div class="project-tech">
                                 <span class="tech-tag">
                                     Symfony
                                 </span>
-                                <span class="tech-tag">
+                            <span class="tech-tag">
                                     PHP
                                 </span>
-                                <span class="tech-tag">
+                            <span class="tech-tag">
                                     SQL
                                 </span>
-                                <span class="tech-tag">
+                            <span class="tech-tag">
                                     API REST
                                 </span>
-                            </div>
+                        </div>
 
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                    <span>Code</span>
-                                </a>
-                                <a href="#" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Demo</span>
-                                </a>
-                            </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Gestion de Zoo">
+                        <div class="project-year">
+                            2024
                         </div>
                     </div>
 
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Gestion de Zoo">
-                            <div class="project-year">
-                                2024
-                            </div>
-                        </div>
-
-                        <div class="project-content">
-                            <div class="flex items-center justify-between mb-3">
+                    <div class="project-content">
+                        <div class="flex items-center justify-between mb-3">
                                 <span class="project-category">
                                     Desktop
                                 </span>
-                            </div>
+                        </div>
 
-                            <h3 class="project-title">
-                                Gestion de Zoo
-                            </h3>
+                        <h3 class="project-title">
+                            Gestion de Zoo
+                        </h3>
 
-                            <p class="project-description">
-                                Application de gestion complète pour zoo avec interface JavaFX
-                            </p>
+                        <p class="project-description">
+                            Application de gestion complète pour zoo avec interface JavaFX
+                        </p>
 
-                            <div class="project-tech">
+                        <div class="project-tech">
                                 <span class="tech-tag">
                                     Java
                                 </span>
-                                <span class="tech-tag">
+                            <span class="tech-tag">
                                     JavaFX
                                 </span>
-                                <span class="tech-tag">
+                            <span class="tech-tag">
                                     MySQL
                                 </span>
-                            </div>
+                        </div>
 
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                    <span>Code</span>
-                                </a>
-                                <a href="#" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Demo</span>
-                                </a>
-                            </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&w=800" alt="MasterMind">
+                        <div class="project-year">
+                            2023
                         </div>
                     </div>
 
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&w=800" alt="MasterMind">
-                            <div class="project-year">
-                                2023
-                            </div>
-                        </div>
-
-                        <div class="project-content">
-                            <div class="flex items-center justify-between mb-3">
+                    <div class="project-content">
+                        <div class="flex items-center justify-between mb-3">
                                 <span class="project-category">
                                     Game
                                 </span>
-                            </div>
+                        </div>
 
-                            <h3 class="project-title">
-                                MasterMind
-                            </h3>
+                        <h3 class="project-title">
+                            MasterMind
+                        </h3>
 
-                            <p class="project-description">
-                                Jeu de réflexion classique avec interface graphique
-                            </p>
+                        <p class="project-description">
+                            Jeu de réflexion classique avec interface graphique
+                        </p>
 
-                            <div class="project-tech">
+                        <div class="project-tech">
                                 <span class="tech-tag">
                                     Java
                                 </span>
-                                <span class="tech-tag">
+                            <span class="tech-tag">
                                     Swing
                                 </span>
-                            </div>
+                        </div>
 
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                    <span>Code</span>
-                                </a>
-                                <a href="#" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Demo</span>
-                                </a>
-                            </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/262438/pexels-photo-262438.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tic-Tac-Toe">
+                        <div class="project-year">
+                            2023
                         </div>
                     </div>
 
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.pexels.com/photos/262438/pexels-photo-262438.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tic-Tac-Toe">
-                            <div class="project-year">
-                                2023
-                            </div>
-                        </div>
-
-                        <div class="project-content">
-                            <div class="flex items-center justify-between mb-3">
+                    <div class="project-content">
+                        <div class="flex items-center justify-between mb-3">
                                 <span class="project-category">
                                     Game
                                 </span>
-                            </div>
+                        </div>
 
-                            <h3 class="project-title">
-                                Tic-Tac-Toe
-                            </h3>
+                        <h3 class="project-title">
+                            Tic-Tac-Toe
+                        </h3>
 
-                            <p class="project-description">
-                                Jeu de morpion avec IA
-                            </p>
+                        <p class="project-description">
+                            Jeu de morpion avec IA
+                        </p>
 
-                            <div class="project-tech">
+                        <div class="project-tech">
                                 <span class="tech-tag">
                                     Java
                                 </span>
-                                <span class="tech-tag">
+                            <span class="tech-tag">
                                     JavaFX
                                 </span>
-                            </div>
+                        </div>
 
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                    <span>Code</span>
-                                </a>
-                                <a href="#" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Demo</span>
-                                </a>
-                            </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800" alt="E-Commerce App">
+                        <div class="project-year">
+                            2024
                         </div>
                     </div>
 
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800" alt="E-Commerce App">
-                            <div class="project-year">
-                                2024
-                            </div>
-                        </div>
-
-                        <div class="project-content">
-                            <div class="flex items-center justify-between mb-3">
+                    <div class="project-content">
+                        <div class="flex items-center justify-between mb-3">
                                 <span class="project-category">
                                     Full Stack
                                 </span>
-                            </div>
+                        </div>
 
-                            <h3 class="project-title">
-                                E-Commerce App
-                            </h3>
+                        <h3 class="project-title">
+                            E-Commerce App
+                        </h3>
 
-                            <p class="project-description">
-                                Plateforme e-commerce complète avec paiement en ligne
-                            </p>
+                        <p class="project-description">
+                            Plateforme e-commerce complète avec paiement en ligne
+                        </p>
 
-                            <div class="project-tech">
+                        <div class="project-tech">
                                 <span class="tech-tag">
                                     React
                                 </span>
-                                <span class="tech-tag">
+                            <span class="tech-tag">
                                     Node.js
                                 </span>
-                                <span class="tech-tag">
+                            <span class="tech-tag">
                                     MongoDB
                                 </span>
-                                <span class="tech-tag">
+                            <span class="tech-tag">
                                     Stripe
                                 </span>
-                            </div>
+                        </div>
 
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                    <span>Code</span>
-                                </a>
-                                <a href="#" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Demo</span>
-                                </a>
-                            </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=800" alt="API Task Management">
+                        <div class="project-year">
+                            2024
                         </div>
                     </div>
 
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=800" alt="API Task Management">
-                            <div class="project-year">
-                                2024
-                            </div>
-                        </div>
-
-                        <div class="project-content">
-                            <div class="flex items-center justify-between mb-3">
+                    <div class="project-content">
+                        <div class="flex items-center justify-between mb-3">
                                 <span class="project-category">
                                     Backend
                                 </span>
-                            </div>
+                        </div>
 
-                            <h3 class="project-title">
-                                API Task Management
-                            </h3>
+                        <h3 class="project-title">
+                            API Task Management
+                        </h3>
 
-                            <p class="project-description">
-                                API REST pour la gestion de tâches avec authentification JWT
-                            </p>
+                        <p class="project-description">
+                            API REST pour la gestion de tâches avec authentification JWT
+                        </p>
 
-                            <div class="project-tech">
+                        <div class="project-tech">
                                 <span class="tech-tag">
                                     Node.js
                                 </span>
-                                <span class="tech-tag">
+                            <span class="tech-tag">
                                     Express
                                 </span>
-                                <span class="tech-tag">
+                            <span class="tech-tag">
                                     MongoDB
                                 </span>
-                                <span class="tech-tag">
+                            <span class="tech-tag">
                                     JWT
                                 </span>
-                            </div>
+                        </div>
 
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                    <span>Code</span>
-                                </a>
-                                <a href="#" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Demo</span>
-                                </a>
-                            </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Analytics Dashboard">
+                        <div class="project-year">
+                            2023
                         </div>
                     </div>
 
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Analytics Dashboard">
-                            <div class="project-year">
-                                2023
-                            </div>
-                        </div>
-
-                        <div class="project-content">
-                            <div class="flex items-center justify-between mb-3">
+                    <div class="project-content">
+                        <div class="flex items-center justify-between mb-3">
                                 <span class="project-category">
                                     Frontend
                                 </span>
-                            </div>
+                        </div>
 
-                            <h3 class="project-title">
-                                Analytics Dashboard
-                            </h3>
+                        <h3 class="project-title">
+                            Analytics Dashboard
+                        </h3>
 
-                            <p class="project-description">
-                                Tableau de bord d'analytique avec visualisations interactives
-                            </p>
+                        <p class="project-description">
+                            Tableau de bord d'analytique avec visualisations interactives
+                        </p>
 
-                            <div class="project-tech">
+                        <div class="project-tech">
                                 <span class="tech-tag">
                                     React
                                 </span>
-                                <span class="tech-tag">
+                            <span class="tech-tag">
                                     Chart.js
                                 </span>
-                                <span class="tech-tag">
+                            <span class="tech-tag">
                                     Tailwind CSS
                                 </span>
-                            </div>
+                        </div>
 
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                    <span>Code</span>
-                                </a>
-                                <a href="#" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Demo</span>
-                                </a>
-                            </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Weather Mobile App">
+                        <div class="project-year">
+                            2023
                         </div>
                     </div>
 
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Weather Mobile App">
-                            <div class="project-year">
-                                2023
-                            </div>
-                        </div>
-
-                        <div class="project-content">
-                            <div class="flex items-center justify-between mb-3">
+                    <div class="project-content">
+                        <div class="flex items-center justify-between mb-3">
                                 <span class="project-category">
                                     Mobile
                                 </span>
-                            </div>
+                        </div>
 
-                            <h3 class="project-title">
-                                Weather Mobile App
-                            </h3>
+                        <h3 class="project-title">
+                            Weather Mobile App
+                        </h3>
 
-                            <p class="project-description">
-                                Application météo avec géolocalisation
-                            </p>
+                        <p class="project-description">
+                            Application météo avec géolocalisation
+                        </p>
 
-                            <div class="project-tech">
+                        <div class="project-tech">
                                 <span class="tech-tag">
                                     React Native
                                 </span>
-                                <span class="tech-tag">
+                            <span class="tech-tag">
                                     API REST
                                 </span>
-                            </div>
+                        </div>
 
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                    <span>Code</span>
-                                </a>
-                                <a href="#" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Demo</span>
-                                </a>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-bg">
+        <div class="container-lg">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text">
+                Compétences
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">
+                Technologies et outils que je maîtrise
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-code icon-lg text-blue-400"></i>
+                        <h3 class="skill-title">Langages</h3>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PHP</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-blue" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-blue" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Java</span>
+                                <span class="skill-level">80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-blue" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML/CSS</span>
+                                <span class="skill-level">95%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-blue" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level">70%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-blue" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-blue" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-server icon-lg text-purple-400"></i>
+                        <h3 class="skill-title">Frameworks & Bibliothèques</h3>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Symfony</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-purple" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">React</span>
+                                <span class="skill-level">80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-purple" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Vue.js</span>
+                                <span class="skill-level">75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-purple" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-level">80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-purple" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">jQuery</span>
+                                <span class="skill-level">70%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-purple" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Bootstrap</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-purple" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Tailwind CSS</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-purple" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaFX</span>
+                                <span class="skill-level">75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-purple" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-database icon-lg text-pink-400"></i>
+                        <h3 class="skill-title">Bases de Données</h3>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">MySQL</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-pink" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">MongoDB</span>
+                                <span class="skill-level">75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-pink" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PostgreSQL</span>
+                                <span class="skill-level">70%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-pink" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-tools icon-lg text-green-400"></i>
+                        <h3 class="skill-title">Outils & Technologies</h3>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git/GitHub</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-green" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">WordPress</span>
+                                <span class="skill-level">75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-green" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JWT</span>
+                                <span class="skill-level">80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-green" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Stripe</span>
+                                <span class="skill-level">70%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-green" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Chart.js</span>
+                                <span class="skill-level">75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-green" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">React Native</span>
+                                <span class="skill-level">70%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-green" style="width: 70%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="section section-bg">
-            <div class="container-lg">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text">
-                    Compétences
-                </h2>
-                <p class="text-center text-gray-400 mb-12 text-lg">
-                    Technologies et outils que je maîtrise
-                </p>
+    <!-- Tech Watch Section -->
+    <section id="techwatch" class="section">
+        <div class="container-lg">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text">
+                Veille Technologique
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">
+                Articles et actualités sur les technologies émergentes
+            </p>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="skill-category">
-                        <div class="skill-header">
-                            <i class="fas fa-code icon-lg text-blue-400"></i>
-                            <h3 class="skill-title">Langages</h3>
-                        </div>
-
-                        <div class="space-y-4">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">PHP</span>
-                                    <span class="skill-level">90%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-blue" style="width: 90%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">JavaScript</span>
-                                    <span class="skill-level">85%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-blue" style="width: 85%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Java</span>
-                                    <span class="skill-level">80%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-blue" style="width: 80%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">HTML/CSS</span>
-                                    <span class="skill-level">95%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-blue" style="width: 95%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Python</span>
-                                    <span class="skill-level">70%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-blue" style="width: 70%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">SQL</span>
-                                    <span class="skill-level">85%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-blue" style="width: 85%"></div>
-                                </div>
-                            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800" alt="L'IA dans le Développement">
+                        <div class="project-year">
+                            Intelligence Artificielle
                         </div>
                     </div>
 
-                    <div class="skill-category">
-                        <div class="skill-header">
-                            <i class="fas fa-server icon-lg text-purple-400"></i>
-                            <h3 class="skill-title">Frameworks & Bibliothèques</h3>
+                    <div class="project-content">
+                        <div class="flex items-center space-x-2 text-gray-400 text-sm mb-3">
+                            <i class="fas fa-calendar icon"></i>
+                            <span>15 Mars 2024</span>
                         </div>
 
-                        <div class="space-y-4">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Symfony</span>
-                                    <span class="skill-level">85%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-purple" style="width: 85%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">React</span>
-                                    <span class="skill-level">80%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-purple" style="width: 80%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Vue.js</span>
-                                    <span class="skill-level">75%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-purple" style="width: 75%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Node.js</span>
-                                    <span class="skill-level">80%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-purple" style="width: 80%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">jQuery</span>
-                                    <span class="skill-level">70%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-purple" style="width: 70%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Bootstrap</span>
-                                    <span class="skill-level">85%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-purple" style="width: 85%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Tailwind CSS</span>
-                                    <span class="skill-level">90%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-purple" style="width: 90%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">JavaFX</span>
-                                    <span class="skill-level">75%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-purple" style="width: 75%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        <h3 class="project-title">
+                            L'IA dans le Développement
+                        </h3>
 
-                    <div class="skill-category">
-                        <div class="skill-header">
-                            <i class="fas fa-database icon-lg text-pink-400"></i>
-                            <h3 class="skill-title">Bases de Données</h3>
-                        </div>
+                        <p class="project-description">Comment l'intelligence artificielle révolutionne le développement logiciel et améliore la productivité des développeurs.</p>
 
-                        <div class="space-y-4">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">MySQL</span>
-                                    <span class="skill-level">85%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-pink" style="width: 85%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">MongoDB</span>
-                                    <span class="skill-level">75%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-pink" style="width: 75%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">PostgreSQL</span>
-                                    <span class="skill-level">70%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-pink" style="width: 70%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <div class="skill-header">
-                            <i class="fas fa-tools icon-lg text-green-400"></i>
-                            <h3 class="skill-title">Outils & Technologies</h3>
-                        </div>
-
-                        <div class="space-y-4">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Git/GitHub</span>
-                                    <span class="skill-level">85%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-green" style="width: 85%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">WordPress</span>
-                                    <span class="skill-level">75%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-green" style="width: 75%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">JWT</span>
-                                    <span class="skill-level">80%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-green" style="width: 80%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Stripe</span>
-                                    <span class="skill-level">70%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-green" style="width: 70%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Chart.js</span>
-                                    <span class="skill-level">75%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-green" style="width: 75%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">React Native</span>
-                                    <span class="skill-level">70%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-green" style="width: 70%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tech Watch Section -->
-        <section id="techwatch" class="section">
-            <div class="container-lg">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text">
-                    Veille Technologique
-                </h2>
-                <p class="text-center text-gray-400 mb-12 text-lg">
-                    Articles et actualités sur les technologies émergentes
-                </p>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800" alt="L'IA dans le Développement">
-                            <div class="project-year">
-                                Intelligence Artificielle
-                            </div>
-                        </div>
-
-                        <div class="project-content">
-                            <div class="flex items-center space-x-2 text-gray-400 text-sm mb-3">
-                                <i class="fas fa-calendar icon"></i>
-                                <span>15 Mars 2024</span>
-                            </div>
-
-                            <h3 class="project-title">
-                                L'IA dans le Développement
-                            </h3>
-
-                            <p class="project-description">Comment l'intelligence artificielle révolutionne le développement logiciel et améliore la productivité des développeurs.</p>
-
-                            <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="tag tag-purple">
                                     IA
                                 </span>
-                                <span class="tag tag-purple">
+                            <span class="tag tag-purple">
                                     Développement
                                 </span>
-                                <span class="tag tag-purple">
+                            <span class="tag tag-purple">
                                     Productivité
                                 </span>
-                            </div>
+                        </div>
 
-                            <a href="#" class="project-link">
-                                <span>Lire l'article</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
+                        <a href="#" class="project-link">
+                            <span>Lire l'article</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=800" alt="React 18 - Nouvelles Fonctionnalités">
+                        <div class="project-year">
+                            Frontend
                         </div>
                     </div>
 
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=800" alt="React 18 - Nouvelles Fonctionnalités">
-                            <div class="project-year">
-                                Frontend
-                            </div>
+                    <div class="project-content">
+                        <div class="flex items-center space-x-2 text-gray-400 text-sm mb-3">
+                            <i class="fas fa-calendar icon"></i>
+                            <span>10 Mars 2024</span>
                         </div>
 
-                        <div class="project-content">
-                            <div class="flex items-center space-x-2 text-gray-400 text-sm mb-3">
-                                <i class="fas fa-calendar icon"></i>
-                                <span>10 Mars 2024</span>
-                            </div>
+                        <h3 class="project-title">
+                            React 18 - Nouvelles Fonctionnalités
+                        </h3>
 
-                            <h3 class="project-title">
-                                React 18 - Nouvelles Fonctionnalités
-                            </h3>
+                        <p class="project-description">Découverte des nouvelles fonctionnalités de React 18, notamment le rendu concurrent et les transitions automatiques.</p>
 
-                            <p class="project-description">Découverte des nouvelles fonctionnalités de React 18, notamment le rendu concurrent et les transitions automatiques.</p>
-
-                            <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="tag tag-purple">
                                     React
                                 </span>
-                                <span class="tag tag-purple">
+                            <span class="tag tag-purple">
                                     JavaScript
                                 </span>
-                                <span class="tag tag-purple">
+                            <span class="tag tag-purple">
                                     Frontend
                                 </span>
-                            </div>
+                        </div>
 
-                            <a href="#" class="project-link">
-                                <span>Lire l'article</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
+                        <a href="#" class="project-link">
+                            <span>Lire l'article</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cybersécurité en 2024">
+                        <div class="project-year">
+                            Sécurité
                         </div>
                     </div>
 
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cybersécurité en 2024">
-                            <div class="project-year">
-                                Sécurité
-                            </div>
+                    <div class="project-content">
+                        <div class="flex items-center space-x-2 text-gray-400 text-sm mb-3">
+                            <i class="fas fa-calendar icon"></i>
+                            <span>5 Mars 2024</span>
                         </div>
 
-                        <div class="project-content">
-                            <div class="flex items-center space-x-2 text-gray-400 text-sm mb-3">
-                                <i class="fas fa-calendar icon"></i>
-                                <span>5 Mars 2024</span>
-                            </div>
+                        <h3 class="project-title">
+                            Cybersécurité en 2024
+                        </h3>
 
-                            <h3 class="project-title">
-                                Cybersécurité en 2024
-                            </h3>
+                        <p class="project-description">Les enjeux de la cybersécurité et les meilleures pratiques pour protéger les applications web modernes.</p>
 
-                            <p class="project-description">Les enjeux de la cybersécurité et les meilleures pratiques pour protéger les applications web modernes.</p>
-
-                            <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="tag tag-purple">
                                     Sécurité
                                 </span>
-                                <span class="tag tag-purple">
+                            <span class="tag tag-purple">
                                     Web
                                 </span>
-                                <span class="tag tag-purple">
+                            <span class="tag tag-purple">
                                     Best Practices
                                 </span>
-                            </div>
+                        </div>
 
-                            <a href="#" class="project-link">
-                                <span>Lire l'article</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
+                        <a href="#" class="project-link">
+                            <span>Lire l'article</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/2881229/pexels-photo-2881229.jpeg?auto=compress&cs=tinysrgb&w=800" alt="DevOps & Cloud Native">
+                        <div class="project-year">
+                            Infrastructure
                         </div>
                     </div>
 
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.pexels.com/photos/2881229/pexels-photo-2881229.jpeg?auto=compress&cs=tinysrgb&w=800" alt="DevOps & Cloud Native">
-                            <div class="project-year">
-                                Infrastructure
-                            </div>
+                    <div class="project-content">
+                        <div class="flex items-center space-x-2 text-gray-400 text-sm mb-3">
+                            <i class="fas fa-calendar icon"></i>
+                            <span>1 Mars 2024</span>
                         </div>
 
-                        <div class="project-content">
-                            <div class="flex items-center space-x-2 text-gray-400 text-sm mb-3">
-                                <i class="fas fa-calendar icon"></i>
-                                <span>1 Mars 2024</span>
-                            </div>
+                        <h3 class="project-title">
+                            DevOps & Cloud Native
+                        </h3>
 
-                            <h3 class="project-title">
-                                DevOps & Cloud Native
-                            </h3>
+                        <p class="project-description">L'évolution des pratiques DevOps et l'adoption des architectures cloud native pour les applications modernes.</p>
 
-                            <p class="project-description">L'évolution des pratiques DevOps et l'adoption des architectures cloud native pour les applications modernes.</p>
-
-                            <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="tag tag-purple">
                                     DevOps
                                 </span>
-                                <span class="tag tag-purple">
+                            <span class="tag tag-purple">
                                     Cloud
                                 </span>
-                                <span class="tag tag-purple">
+                            <span class="tag tag-purple">
                                     Infrastructure
                                 </span>
+                        </div>
+
+                        <a href="#" class="project-link">
+                            <span>Lire l'article</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <button class="btn btn-primary">
+                    <i class="fas fa-newspaper"></i>
+                    <span>Voir tous les articles</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv" class="section section-bg">
+        <div class="container">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text">
+                Curriculum Vitae
+            </h2>
+            <p class="text-center text-gray-400 mb-8 text-lg">
+                Mon parcours professionnel et académique
+            </p>
+
+            <div class="text-center mb-12">
+                <a href="CV AOUZAL-Jawad.pdf" download="CV_AOUZAL_Jawad.pdf" class="btn btn-secondary">
+                    <i class="fas fa-download"></i>
+                    <span>Télécharger le CV</span>
+                </a>
+            </div>
+
+            <div class="space-y-8">
+                <div class="card">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <i class="fas fa-briefcase icon-lg text-blue-400"></i>
+                        <h3 class="text-2xl font-semibold text-white">Expérience Professionnelle</h3>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div style="border-left: 2px solid #3b82f6; padding-left: 1.5rem;">
+                            <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
+                                <div>
+                                    <h4 class="text-xl font-semibold text-white">Stage Développeur Full Stack</h4>
+                                    <p class="text-gray-300">Entreprise Tech</p>
+                                </div>
+                                <span class="text-gray-400 text-sm mt-1 md:mt-0">Juin 2024 - Août 2024</span>
+                            </div>
+                            <p class="text-gray-400 mb-3">Développement d'applications web avec Symfony et React. Participation à des projets clients et amélioration des performances.</p>
+                            <ul class="space-y-1">
+                                <li class="text-gray-300 text-sm flex items-start">
+                                    <span class="text-blue-400 mr-2">•</span>
+                                    Développement de 3 fonctionnalités majeures
+                                </li>
+                                <li class="text-gray-300 text-sm flex items-start">
+                                    <span class="text-blue-400 mr-2">•</span>
+                                    Optimisation des performances de 40%
+                                </li>
+                                <li class="text-gray-300 text-sm flex items-start">
+                                    <span class="text-blue-400 mr-2">•</span>
+                                    Mise en place de tests unitaires
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div style="border-left: 2px solid #3b82f6; padding-left: 1.5rem;">
+                            <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
+                                <div>
+                                    <h4 class="text-xl font-semibold text-white">Projets Académiques</h4>
+                                    <p class="text-gray-300">BTS SIO SLAM</p>
+                                </div>
+                                <span class="text-gray-400 text-sm mt-1 md:mt-0">2024 - Présent</span>
+                            </div>
+                            <p class="text-gray-400 mb-3">Réalisation de projets divers dans le cadre de la formation BTS SIO option SLAM.</p>
+                            <ul class="space-y-1">
+                                <li class="text-gray-300 text-sm flex items-start">
+                                    <span class="text-blue-400 mr-2">•</span>
+                                    Développement d'applications web et desktop
+                                </li>
+                                <li class="text-gray-300 text-sm flex items-start">
+                                    <span class="text-blue-400 mr-2">•</span>
+                                    Travail en équipe sur des projets collaboratifs
+                                </li>
+                                <li class="text-gray-300 text-sm flex items-start">
+                                    <span class="text-blue-400 mr-2">•</span>
+                                    Présentation de projets devant un jury
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card">
+                        <div class="flex items-center space-x-3 mb-6">
+                            <i class="fas fa-language icon-lg text-purple-400"></i>
+                            <h3 class="text-2xl font-semibold text-white">Langues</h3>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-300 font-medium">Français</span>
+                                </div>
+                                <p class="text-gray-400 text-sm">Langue maternelle</p>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-300 font-medium">Anglais</span>
+                                </div>
+                                <p class="text-gray-400 text-sm">Niveau B2</p>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-300 font-medium">Espagnol</span>
+                                </div>
+                                <p class="text-gray-400 text-sm">Niveau A2</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="flex items-center space-x-3 mb-6">
+                            <i class="fas fa-heart icon-lg text-pink-400"></i>
+                            <h3 class="text-2xl font-semibold text-white">Centres d'Intérêt</h3>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3">
+                                <span class="tag tag-purple">
+                                    Programmation
+                                </span>
+                            <span class="tag tag-purple">
+                                    Cinéma
+                                </span>
+                            <span class="tag tag-purple">
+                                    Veille Technologique
+                                </span>
+                            <span class="tag tag-purple">
+                                    Sport
+                                </span>
+                            <span class="tag tag-purple">
+                                    Musique
+                                </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <i class="fas fa-award icon-lg text-green-400"></i>
+                        <h3 class="text-2xl font-semibold text-white">Certifications & Réalisations</h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-start space-x-3">
+                            <div style="width: 0.5rem; height: 0.5rem; background-color: #4ade80; border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0;"></div>
+                            <div>
+                                <h4 class="text-white font-semibold">Participation à des Hackathons</h4>
+                                <p class="text-gray-400 text-sm">
+                                    Plusieurs participations à des événements de développement
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div style="width: 0.5rem; height: 0.5rem; background-color: #4ade80; border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0;"></div>
+                            <div>
+                                <h4 class="text-white font-semibold">Projets Open Source</h4>
+                                <p class="text-gray-400 text-sm">
+                                    Contributions à divers projets open source sur GitHub
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div style="width: 0.5rem; height: 0.5rem; background-color: #4ade80; border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0;"></div>
+                            <div>
+                                <h4 class="text-white font-semibold">Veille Technologique Active</h4>
+                                <p class="text-gray-400 text-sm">
+                                    Suivi régulier des tendances et nouvelles technologies
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div style="width: 0.5rem; height: 0.5rem; background-color: #4ade80; border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0;"></div>
+                            <div>
+                                <h4 class="text-white font-semibold">Travail en Équipe</h4>
+                                <p class="text-gray-400 text-sm">
+                                    Expérience en méthodologie Agile et gestion de projet
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text">
+                Contact
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">
+                N'hésitez pas à me contacter pour toute question ou opportunité
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-6">
+                    <div class="card">
+                        <h3 class="text-2xl font-semibold mb-6 text-white">Informations de Contact</h3>
+
+                        <div class="space-y-4">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope contact-icon text-blue-400"></i>
+                                <div class="contact-details">
+                                    <h4 class="font-semibold mb-1">Email</h4>
+                                    <a href="mailto:cjawad.a@gmail.com" class="hover:text-blue-400 transition-colors">
+                                        cjawad.a@gmail.com
+                                    </a>
+                                </div>
                             </div>
 
-                            <a href="#" class="project-link">
-                                <span>Lire l'article</span>
-                                <i class="fas fa-arrow-right"></i>
+                            <div class="contact-item">
+                                <i class="fas fa-phone contact-icon text-purple-400"></i>
+                                <div class="contact-details">
+                                    <h4 class="font-semibold mb-1">Téléphone</h4>
+                                    <a href="tel:+33612082033" class="hover:text-purple-400 transition-colors">
+                                        +33 6 12 08 20 33
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt contact-icon text-pink-400"></i>
+                                <div class="contact-details">
+                                    <h4 class="font-semibold mb-1">Localisation</h4>
+                                    <p class="text-gray-300">Aulnay-sous-bois</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="text-2xl font-semibold mb-6 text-white">Réseaux Sociaux</h3>
+
+                        <div class="social-links">
+                            <a href="https://github.com/JawadDeBagnolet?tab=repositories" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <div class="social-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="social-details">
+                                    <h4 class="font-semibold">GitHub</h4>
+                                    <p class="text-sm text-gray-400">Voir mes projets</p>
+                                </div>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/jawad-aouzal-124891342/" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <div class="social-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="social-details">
+                                    <h4 class="font-semibold">LinkedIn</h4>
+                                    <p class="text-sm text-gray-400">Mon profil professionnel</p>
+                                </div>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="mt-12 text-center">
-                    <button class="btn btn-primary">
-                        <i class="fas fa-newspaper"></i>
-                        <span>Voir tous les articles</span>
-                    </button>
-                </div>
-            </div>
-        </section>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-6 text-white">Envoyez-moi un Message</h3>
 
-        <!-- CV Section -->
-        <section id="cv" class="section section-bg">
-            <div class="container">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text">
-                    Curriculum Vitae
-                </h2>
-                <p class="text-center text-gray-400 mb-8 text-lg">
-                    Mon parcours professionnel et académique
-                </p>
-
-                <div class="text-center mb-12">
-                    <a href="CV AOUZAL-Jawad.pdf" download="CV_AOUZAL_Jawad.pdf" class="btn btn-secondary">
-                        <i class="fas fa-download"></i>
-                        <span>Télécharger le CV</span>
-                    </a>
-                </div>
-
-                <div class="space-y-8">
-                    <div class="card">
-                        <div class="flex items-center space-x-3 mb-6">
-                            <i class="fas fa-briefcase icon-lg text-blue-400"></i>
-                            <h3 class="text-2xl font-semibold text-white">Expérience Professionnelle</h3>
-                        </div>
-
-                        <div class="space-y-6">
-                            <div style="border-left: 2px solid #3b82f6; padding-left: 1.5rem;">
-                                <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
-                                    <div>
-                                        <h4 class="text-xl font-semibold text-white">Stage Développeur Full Stack</h4>
-                                        <p class="text-gray-300">Entreprise Tech</p>
-                                    </div>
-                                    <span class="text-gray-400 text-sm mt-1 md:mt-0">Juin 2024 - Août 2024</span>
-                                </div>
-                                <p class="text-gray-400 mb-3">Développement d'applications web avec Symfony et React. Participation à des projets clients et amélioration des performances.</p>
-                                <ul class="space-y-1">
-                                    <li class="text-gray-300 text-sm flex items-start">
-                                        <span class="text-blue-400 mr-2">•</span>
-                                        Développement de 3 fonctionnalités majeures
-                                    </li>
-                                    <li class="text-gray-300 text-sm flex items-start">
-                                        <span class="text-blue-400 mr-2">•</span>
-                                        Optimisation des performances de 40%
-                                    </li>
-                                    <li class="text-gray-300 text-sm flex items-start">
-                                        <span class="text-blue-400 mr-2">•</span>
-                                        Mise en place de tests unitaires
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div style="border-left: 2px solid #3b82f6; padding-left: 1.5rem;">
-                                <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
-                                    <div>
-                                        <h4 class="text-xl font-semibold text-white">Projets Académiques</h4>
-                                        <p class="text-gray-300">BTS SIO SLAM</p>
-                                    </div>
-                                    <span class="text-gray-400 text-sm mt-1 md:mt-0">2024 - Présent</span>
-                                </div>
-                                <p class="text-gray-400 mb-3">Réalisation de projets divers dans le cadre de la formation BTS SIO option SLAM.</p>
-                                <ul class="space-y-1">
-                                    <li class="text-gray-300 text-sm flex items-start">
-                                        <span class="text-blue-400 mr-2">•</span>
-                                        Développement d'applications web et desktop
-                                    </li>
-                                    <li class="text-gray-300 text-sm flex items-start">
-                                        <span class="text-blue-400 mr-2">•</span>
-                                        Travail en équipe sur des projets collaboratifs
-                                    </li>
-                                    <li class="text-gray-300 text-sm flex items-start">
-                                        <span class="text-blue-400 mr-2">•</span>
-                                        Présentation de projets devant un jury
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="card">
-                            <div class="flex items-center space-x-3 mb-6">
-                                <i class="fas fa-language icon-lg text-purple-400"></i>
-                                <h3 class="text-2xl font-semibold text-white">Langues</h3>
-                            </div>
-
-                            <div class="space-y-4">
-                                <div>
-                                    <div class="flex justify-between mb-1">
-                                        <span class="text-gray-300 font-medium">Français</span>
-                                    </div>
-                                    <p class="text-gray-400 text-sm">Langue maternelle</p>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between mb-1">
-                                        <span class="text-gray-300 font-medium">Anglais</span>
-                                    </div>
-                                    <p class="text-gray-400 text-sm">Niveau B2 - Intermédiaire</p>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between mb-1">
-                                        <span class="text-gray-300 font-medium">Espagnol</span>
-                                    </div>
-                                    <p class="text-gray-400 text-sm">Niveau A2 - Élémentaire</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="flex items-center space-x-3 mb-6">
-                                <i class="fas fa-heart icon-lg text-pink-400"></i>
-                                <h3 class="text-2xl font-semibold text-white">Centres d'Intérêt</h3>
-                            </div>
-
-                            <div class="flex flex-wrap gap-3">
-                                <span class="tag tag-purple">
-                                    Programmation
-                                </span>
-                                <span class="tag tag-purple">
-                                    Open Source
-                                </span>
-                                <span class="tag tag-purple">
-                                    Veille Technologique
-                                </span>
-                                <span class="tag tag-purple">
-                                    Gaming
-                                </span>
-                                <span class="tag tag-purple">
-                                    Hackathons
-                                </span>
-                                <span class="tag tag-purple">
-                                    Nouvelles Technologies
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="flex items-center space-x-3 mb-6">
-                            <i class="fas fa-award icon-lg text-green-400"></i>
-                            <h3 class="text-2xl font-semibold text-white">Certifications & Réalisations</h3>
-                        </div>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="flex items-start space-x-3">
-                                <div style="width: 0.5rem; height: 0.5rem; background-color: #4ade80; border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0;"></div>
-                                <div>
-                                    <h4 class="text-white font-semibold">Participation à des Hackathons</h4>
-                                    <p class="text-gray-400 text-sm">
-                                        Plusieurs participations à des événements de développement
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-3">
-                                <div style="width: 0.5rem; height: 0.5rem; background-color: #4ade80; border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0;"></div>
-                                <div>
-                                    <h4 class="text-white font-semibold">Projets Open Source</h4>
-                                    <p class="text-gray-400 text-sm">
-                                        Contributions à divers projets open source sur GitHub
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-3">
-                                <div style="width: 0.5rem; height: 0.5rem; background-color: #4ade80; border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0;"></div>
-                                <div>
-                                    <h4 class="text-white font-semibold">Veille Technologique Active</h4>
-                                    <p class="text-gray-400 text-sm">
-                                        Suivi régulier des tendances et nouvelles technologies
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-3">
-                                <div style="width: 0.5rem; height: 0.5rem; background-color: #4ade80; border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0;"></div>
-                                <div>
-                                    <h4 class="text-white font-semibold">Travail en Équipe</h4>
-                                    <p class="text-gray-400 text-sm">
-                                        Expérience en méthodologie Agile et gestion de projet
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="container">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text">
-                    Contact
-                </h2>
-                <p class="text-center text-gray-400 mb-12 text-lg">
-                    N'hésitez pas à me contacter pour toute question ou opportunité
-                </p>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="space-y-6">
-                        <div class="card">
-                            <h3 class="text-2xl font-semibold mb-6 text-white">Informations de Contact</h3>
-
-                            <div class="space-y-4">
-                                <div class="contact-item">
-                                    <i class="fas fa-envelope contact-icon text-blue-400"></i>
-                                    <div class="contact-details">
-                                        <h4 class="font-semibold mb-1">Email</h4>
-                                        <a href="mailto:contact@example.com" class="hover:text-blue-400 transition-colors">
-                                            contact@example.com
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="contact-item">
-                                    <i class="fas fa-phone contact-icon text-purple-400"></i>
-                                    <div class="contact-details">
-                                        <h4 class="font-semibold mb-1">Téléphone</h4>
-                                        <a href="tel:+33123456789" class="hover:text-purple-400 transition-colors">
-                                            +33 1 23 45 67 89
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="contact-item">
-                                    <i class="fas fa-map-marker-alt contact-icon text-pink-400"></i>
-                                    <div class="contact-details">
-                                        <h4 class="font-semibold mb-1">Localisation</h4>
-                                        <p class="text-gray-300">France</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <h3 class="text-2xl font-semibold mb-6 text-white">Réseaux Sociaux</h3>
-
-                            <div class="social-links">
-                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link">
-                                    <div class="social-icon">
-                                        <i class="fab fa-github"></i>
-                                    </div>
-                                    <div class="social-details">
-                                        <h4 class="font-semibold">GitHub</h4>
-                                        <p class="text-sm text-gray-400">Voir mes projets</p>
-                                    </div>
-                                </a>
-
-                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link">
-                                    <div class="social-icon">
-                                        <i class="fab fa-linkedin"></i>
-                                    </div>
-                                    <div class="social-details">
-                                        <h4 class="font-semibold">LinkedIn</h4>
-                                        <p class="text-sm text-gray-400">Mon profil professionnel</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <h3 class="text-2xl font-semibold mb-6 text-white">Envoyez-moi un Message</h3>
-
-                        <form class="space-y-4">
-                            <div class="form-group">
-                                <label for="name" class="form-label">
-                                    Nom
-                                </label>
-                                <input
+                    <form class="space-y-4">
+                        <div class="form-group">
+                            <label for="name" class="form-label">
+                                Nom
+                            </label>
+                            <input
                                     type="text"
                                     id="name"
                                     name="name"
                                     required
                                     class="form-input"
                                     placeholder="Votre nom"
-                                />
-                            </div>
+                            />
+                        </div>
 
-                            <div class="form-group">
-                                <label for="email" class="form-label">
-                                    Email
-                                </label>
-                                <input
+                        <div class="form-group">
+                            <label for="email" class="form-label">
+                                Email
+                            </label>
+                            <input
                                     type="email"
                                     id="email"
                                     name="email"
                                     required
                                     class="form-input"
                                     placeholder="votre@email.com"
-                                />
-                            </div>
+                            />
+                        </div>
 
-                            <div class="form-group">
-                                <label for="subject" class="form-label">
-                                    Sujet
-                                </label>
-                                <input
+                        <div class="form-group">
+                            <label for="subject" class="form-label">
+                                Sujet
+                            </label>
+                            <input
                                     type="text"
                                     id="subject"
                                     name="subject"
                                     required
                                     class="form-input"
                                     placeholder="Sujet de votre message"
-                                />
-                            </div>
+                            />
+                        </div>
 
-                            <div class="form-group">
-                                <label for="message" class="form-label">
-                                    Message
-                                </label>
-                                <textarea
+                        <div class="form-group">
+                            <label for="message" class="form-label">
+                                Message
+                            </label>
+                            <textarea
                                     id="message"
                                     name="message"
                                     required
                                     rows="5"
                                     class="form-input form-textarea"
                                     placeholder="Votre message..."
-                                ></textarea>
-                            </div>
+                            ></textarea>
+                        </div>
 
-                            <button
+                        <button
                                 type="submit"
                                 class="btn btn-primary"
                                 style="width: 100%;"
-                            >
-                                <i class="fas fa-paper-plane"></i>
-                                <span>Envoyer le Message</span>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="footer">
-                    <p>
-                        © 2024 Portfolio. Tous droits réservés.
-                    </p>
+                        >
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Envoyer le Message</span>
+                        </button>
+                    </form>
                 </div>
             </div>
-        </section>
-    </div>
-    <script src="script.js"></script>
+
+            <div class="footer">
+                <p>
+                    © 2024 Portfolio. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
