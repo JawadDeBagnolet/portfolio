@@ -212,28 +212,30 @@ function clearFieldError(e) {
 function submitForm(form) {
     const submitButton = form.querySelector('button[type="submit"]');
     const originalText = submitButton.innerHTML;
-    
-    // Show loading state
+    // Affiche l'état de chargement
     submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
     submitButton.disabled = true;
 
-    // Crée un FormData à partir du formulaire
+    // Prépare les données du formulaire
     const formData = new FormData(form);
 
     // Envoie vers FormSubmit
-    fetch('https://formsubmit.co/your@email.com', {
+    fetch('https://formsubmit.co/cjawad.a@gmail.com', {
         method: 'POST',
         body: formData
     })
         .then(response => {
             if (response.ok) {
+                // Succès : affiche notification + réinitialise le formulaire
                 showNotification('✅ Message envoyé avec succès ! Je vous répondrai rapidement.', 'success');
                 form.reset();
             } else {
+                // Erreur côté serveur
                 showNotification('❌ Erreur lors de l’envoi. Veuillez réessayer.', 'error');
             }
         })
         .catch(() => {
+            // Erreur réseau
             showNotification('❌ Une erreur est survenue. Veuillez vérifier votre connexion.', 'error');
         })
         .finally(() => {
