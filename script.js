@@ -324,6 +324,19 @@ window.addEventListener('scroll', revealElements);
 // Call reveal function on load
 document.addEventListener('DOMContentLoaded', revealElements);
 
+// Initialize skill bars on page load - show full width immediately
+document.addEventListener('DOMContentLoaded', function() {
+    // Ensure all progress bars show their full width immediately
+    const progressBars = document.querySelectorAll('.progress-fill');
+    progressBars.forEach(bar => {
+        const width = bar.getAttribute('data-width') || bar.style.width;
+        if (width) {
+            bar.style.width = width;
+            bar.style.transition = 'none';
+        }
+    });
+});
+
 // Enhanced Interactive Features
 document.addEventListener('DOMContentLoaded', function() {
     // Add typing animation to hero title
@@ -394,29 +407,17 @@ function addProjectCardEffects() {
     });
 }
 
-// Enhanced skill bar animations
+// Skill bars - no animation, show full width immediately
 function addSkillBarAnimations() {
     const skillBars = document.querySelectorAll('.progress-fill');
     
-    const skillObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const bar = entry.target;
-                const width = bar.style.width;
-                bar.style.width = '0%';
-                bar.style.transition = 'width 1.5s ease-in-out';
-                
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 200);
-                
-                skillObserver.unobserve(bar);
-            }
-        });
-    }, { threshold: 0.5 });
-    
     skillBars.forEach(bar => {
-        skillObserver.observe(bar);
+        // Ensure the bar shows its full width immediately
+        const width = bar.getAttribute('data-width') || bar.style.width;
+        if (width) {
+            bar.style.width = width;
+            bar.style.transition = 'none'; // Remove any transition
+        }
     });
 }
 
