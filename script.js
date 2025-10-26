@@ -216,14 +216,30 @@ function submitForm(form) {
     // Show loading state
     submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
     submitButton.disabled = true;
-    
-    // Simulate form submission
-    setTimeout(() => {
-        showNotification('Message envoyé avec succès ! Je vous répondrai rapidement.', 'success');
-        form.reset();
-        submitButton.innerHTML = originalText;
-        submitButton.disabled = false;
-    }, 2000);
+
+    // Crée un FormData à partir du formulaire
+    const formData = new FormData(form);
+
+    // Envoie vers FormSubmit
+    fetch('https://formsubmit.co/your@email.com', {
+        method: 'POST',
+        body: formData
+    })
+        .then(response => {
+            if (response.ok) {
+                showNotification('✅ Message envoyé avec succès ! Je vous répondrai rapidement.', 'success');
+                form.reset();
+            } else {
+                showNotification('❌ Erreur lors de l’envoi. Veuillez réessayer.', 'error');
+            }
+        })
+        .catch(() => {
+            showNotification('❌ Une erreur est survenue. Veuillez vérifier votre connexion.', 'error');
+        })
+        .finally(() => {
+            submitButton.innerHTML = originalText;
+            submitButton.disabled = false;
+        });
 }
 
 function showNotification(message, type = 'info') {
