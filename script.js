@@ -413,15 +413,6 @@ function addProjectCardEffects() {
         card.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1)';
         });
-        
-        // Add click effect for project links
-        const projectLinks = card.querySelectorAll('.project-link');
-        projectLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                showNotification('Fonctionnalité en développement !', 'info');
-            });
-        });
     });
 }
 
