@@ -3,902 +3,517 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Développeur Full Stack</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=2">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=2">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta name="description" content="Jawad Aouzal — Développeur Full Stack basé à Paris. PHP, Symfony, JavaScript, Java.">
+    <title>Jawad Aouzal — Développeur Full Stack</title>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-    <div class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
-        <!-- Navigation -->
-        <nav class="nav" id="navigation">
-            <div class="nav-container">
-                <div class="nav-content">
-                    <div class="logo">
-                        Portfolio
-                    </div>
 
-                    <div class="nav-items">
-                        <button class="nav-item" onclick="scrollToSection('#hero')">Accueil</button>
-                        <button class="nav-item" onclick="scrollToSection('#about')">À propos</button>
-                        <button class="nav-item" onclick="scrollToSection('#formation')">Formation</button>
-                        <button class="nav-item" onclick="scrollToSection('#projects')">Projets</button>
-                        <button class="nav-item" onclick="scrollToSection('#skills')">Compétences</button>
-                        <button class="nav-item" onclick="scrollToSection('#techwatch')">Veille</button>
-                        <button class="nav-item" onclick="scrollToSection('#cv')">CV</button>
-                        <button class="nav-item" onclick="scrollToSection('#contact')">Contact</button>
-                    </div>
-
-                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                        <i class="fas fa-bars" id="menu-icon"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="mobile-menu" id="mobile-menu">
-                <div class="mobile-menu-content">
-                    <button class="mobile-nav-item" onclick="scrollToSection('#hero')">Accueil</button>
-                    <button class="mobile-nav-item" onclick="scrollToSection('#about')">À propos</button>
-                    <button class="mobile-nav-item" onclick="scrollToSection('#formation')">Formation</button>
-                    <button class="mobile-nav-item" onclick="scrollToSection('#projects')">Projets</button>
-                    <button class="mobile-nav-item" onclick="scrollToSection('#skills')">Compétences</button>
-                    <button class="mobile-nav-item" onclick="scrollToSection('#techwatch')">Veille</button>
-                    <button class="mobile-nav-item" onclick="scrollToSection('#cv')">CV</button>
-                    <button class="mobile-nav-item" onclick="scrollToSection('#contact')">Contact</button>
-                </div>
-            </div>
+    <!-- ═══════════════════════════ NAVIGATION ═══════════════════════════ -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#accueil" class="nav-logo">J. Aouzal</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#formation">Formation</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#cv">CV</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+            </button>
         </nav>
+        <div class="nav-drawer" id="navDrawer" aria-hidden="true">
+            <ul>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#formation">Formation</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#cv">CV</a></li>
+            </ul>
+        </div>
+    </header>
 
-        <!-- Hero Section -->
-        <section id="hero" class="hero">
-            <div class="container">
-                <div class="animate-fade-in">
-                    <h1 class="text-5xl md:text-7xl font-bold mb-4 gradient-text">
-                        Développeur Full Stack
-                    </h1>
-                    <p class="text-xl md:text-2xl text-gray-300 mb-2">
-                        Étudiant BTS SIO SLAM
-                    </p>
-                    <p class="text-lg text-gray-400">
-                        Passionné par le développement web et les technologies modernes
-                    </p>
-                </div>
+    <main>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-                    <div class="card">
-                        <i class="fas fa-code icon-xl text-blue-400 mb-4" style="display: block; text-align: center;"></i>
-                        <h3 class="text-xl font-semibold mb-2 text-center">Frontend</h3>
-                        <p class="text-gray-400 text-center">HTML/CSS, JavaScript</p>
-                    </div>
+        <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+        <section class="hero" id="accueil" aria-label="Introduction">
+            <div class="hero-top container">
+                <span class="hero-eyebrow">Jawad Aouzal &nbsp;·&nbsp; Paris, France &nbsp;·&nbsp; BTS SIO SLAM</span>
+            </div>
 
-                    <div class="card">
-                        <i class="fas fa-database icon-xl text-purple-400 mb-4" style="display: block; text-align: center;"></i>
-                        <h3 class="text-xl font-semibold mb-2 text-center">Backend</h3>
-                        <p class="text-gray-400 text-center">PHP</p>
-                    </div>
+            <div class="hero-rule"></div>
 
-                    <div class="card">
-                        <i class="fas fa-mobile-alt icon-xl text-pink-400 mb-4" style="display: block; text-align: center;"></i>
-                        <h3 class="text-xl font-semibold mb-2 text-center">Framework</h3>
-                        <p class="text-gray-400 text-center">Symfony, JavaFX</p>
-                    </div>
+            <div class="hero-title-wrap container">
+                <h1 class="hero-title">
+                    <span class="hero-line" data-animate>Développeur</span>
+                    <span class="hero-line hero-line-italic" data-animate data-delay="100">Full Stack.</span>
+                </h1>
+            </div>
+
+            <div class="hero-rule"></div>
+
+            <div class="hero-bottom container" data-animate data-delay="200">
+                <p class="hero-desc">
+                    Je conçois et développe des applications web et desktop robustes —
+                    du backend PHP&nbsp;/&nbsp;Symfony à l'interface utilisateur.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projets" class="btn btn-light">Voir les projets</a>
+                    <a href="CV_AOUZAL_Jawad.pdf" download class="btn btn-ghost-light">Télécharger le CV</a>
                 </div>
             </div>
+
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="section">
+        <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+        <section class="section" id="apropos">
             <div class="container">
-                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">
-                    À Propos
-                </h2>
+                <header class="section-header reveal">
+                    <span class="section-num">01</span>
+                    <h2 class="section-title">À propos</h2>
+                </header>
 
-                <div class="space-y-6">
-                    <div class="card-sm">
-                        <i class="fas fa-user icon-lg text-blue-400 mb-4"></i>
-                        <h3 class="text-2xl font-semibold mb-4">Profil Professionnel</h3>
-                        <p class="text-gray-300 leading-relaxed mb-4">
-                            Étudiant en BTS SIO option SLAM (Solutions Logicielles et Applications Métiers)
+                <div class="about-grid">
+                    <div class="about-bio reveal">
+                        <p>
+                            Étudiant en <strong>BTS SIO SLAM</strong> (2024–2026), je me spécialise dans le
+                            développement d'applications web et desktop. Mon parcours m'a conduit à maîtriser
+                            l'écosystème PHP&nbsp;/&nbsp;Symfony ainsi que Java et JavaFX pour les
+                            applications métier.
                         </p>
-                        <p class="text-gray-300 leading-relaxed">
-                            Spécialisé dans le développement Full Stack avec une expertise en Symfony, PHP.
+                        <p>
+                            Je suis convaincu qu'un code propre, maintenable et bien architecturé est la
+                            fondation d'un produit numérique de qualité. Mon objectif : apporter une vraie
+                            valeur technique aux projets sur lesquels je travaille.
                         </p>
-                    </div>
-
-                    <div class="space-y-6">
-                        <div class="card-sm">
-                            <i class="fas fa-bullseye icon-lg text-purple-400 mb-4"></i>
-                            <h3 class="text-2xl font-semibold mb-4">Objectifs</h3>
-                            <p class="text-gray-300">
-                                Développer des applications performantes et créer des solutions
-                                innovantes qui répondent aux besoins des utilisateurs.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Formation Section -->
-        <section id="formation" class="section section-bg">
-            <div class="container">
-                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">
-                    Formation
-                </h2>
-
-                <div class="space-y-8">
-                    <div class="card">
-                        <div class="flex flex-col md:flex md:flex-row md:items-start md:justify-between mb-4">
-                            <div class="flex items-start space-x-4 mb-4 md:mb-0">
-                                <i class="fas fa-graduation-cap icon text-blue-400 flex-shrink-0 mt-1"></i>
-                                <div>
-                                    <h3 class="text-2xl font-semibold text-white mb-1">
-                                        BTS SIO SLAM
-                                    </h3>
-                                    <p class="text-gray-300">Services Informatiques aux Organisations</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-2 text-gray-400">
-                                <i class="fas fa-calendar icon"></i>
-                                <span>2024 - 2026</span>
-                            </div>
-                        </div>
-
-                        <p class="text-gray-300 mb-4">Solutions Logicielles et Applications Métiers</p>
-
-                        <div class="flex flex-wrap gap-2">
-                            <span class="tag tag-blue">
-                                Développement d'applications
-                            </span>
-                            <span class="tag tag-blue">
-                                Développement web
-                            </span>
-                            <span class="tag tag-blue">
-                                Gestion de bases de données
-                            </span>
-                            <span class="tag tag-blue">
-                                Architecture logicielle
-                            </span>
-                            <span class="tag tag-blue">
-                                Gestion de projet
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="flex flex-col md:flex md:flex-row md:items-start md:justify-between mb-4">
-                            <div class="flex items-start space-x-4 mb-4 md:mb-0">
-                                <i class="fas fa-graduation-cap icon text-blue-400 flex-shrink-0 mt-1"></i>
-                                <div>
-                                    <h3 class="text-2xl font-semibold text-white mb-1">
-                                        Baccalauréat
-                                    </h3>
-                                    <p class="text-gray-300">Enseignement Général</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-2 text-gray-400">
-                                <i class="fas fa-calendar icon"></i>
-                                <span>2021 - 2024</span>
-                            </div>
-                        </div>
-
-                        <p class="text-gray-300 mb-4">Formation générale avec spécialisation scientifique</p>
-
-                        <div class="flex flex-wrap gap-2">
-                            <span class="tag tag-blue">
-                                Mathématiques
-                            </span>
-                            <span class="tag tag-blue">
-                                Physique - Chimie
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="section">
-            <div class="container-lg">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text">
-                    Projets
-                </h2>
-                <p class="text-center text-gray-400 mb-12 text-lg">
-                    Une sélection de mes réalisations et projets académiques
-                </p>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Site de Gestion de Cinéma">
-                            <div class="project-year">
-                                2025
-                            </div>
-                        </div>
-
-                        <div class="project-content">
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="project-category">
-                                    Full Stack
-                                </span>
-                            </div>
-
-                            <h3 class="project-title">
-                                Site de Gestion de Cinéma
-                            </h3>
-
-                            <p class="project-description">
-                                Application complète de gestion de cinéma avec réservations
-                            </p>
-
-                            <div class="project-tech">
-                                <span class="tech-tag">
-                                    Symfony
-                                </span>
-                                <span class="tech-tag">
-                                    PHP
-                                </span>
-                                <span class="tech-tag">
-                                    MySQL
-                                </span>
-                                <span class="tech-tag">
-                                    Bootstrap
-                                </span>
-                            </div>
-
-                            <div class="project-links">
-                                <a href="https://github.com/JawadDeBagnolet/cinema_projet_A_B_L_O" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                    <span>Code</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Gestion de Vols">
-                            <div class="project-year">
-                                2025
-                            </div>
-                        </div>
-
-                        <div class="project-content">
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="project-category">
-                                    Full Stack
-                                </span>
-                            </div>
-
-                            <h3 class="project-title">
-                                Gestion de Vols
-                            </h3>
-
-                            <p class="project-description">
-                                Système de gestion et réservation de vols
-                            </p>
-
-                            <div class="project-tech">
-                                <span class="tech-tag">
-                                    PHP
-                                </span>
-                                <span class="tech-tag">
-                                    SQL
-                                </span>
-                                <span class="tech-tag">
-                                    Bootstrap
-                                </span>
-                            </div>
-
-                            <div class="project-links">
-                                <a href="https://github.com/JawadDeBagnolet/tpVol" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                    <span>Code</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Gestion de Zoo">
-                            <div class="project-year">
-                                2024
-                            </div>
-                        </div>
-
-                        <div class="project-content">
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="project-category">
-                                    Desktop
-                                </span>
-                            </div>
-
-                            <h3 class="project-title">
-                                Gestion de Zoo
-                            </h3>
-
-                            <p class="project-description">
-                                Application de gestion complète pour zoo
-                            </p>
-
-                            <div class="project-tech">
-                                <span class="tech-tag">
-                                    Java
-                                </span>
-                                <span class="tech-tag">
-                                    JavaFX
-                                </span>
-                                <span class="tech-tag">
-                                    MySQL
-                                </span>
-                            </div>
-
-                            <div class="project-links">
-                                <a href="https://github.com/JawadDeBagnolet/GestionZoo" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                    <span>Code</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.pexels.com/photos/262438/pexels-photo-262438.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tic-Tac-Toe">
-                            <div class="project-year">
-                                2024
-                            </div>
-                        </div>
-
-                        <div class="project-content">
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="project-category">
-                                    Game
-                                </span>
-                            </div>
-
-                            <h3 class="project-title">
-                                Tic-Tac-Toe
-                            </h3>
-
-                            <p class="project-description">
-                                Jeu de morpion
-                            </p>
-
-                            <div class="project-tech">
-                                <span class="tech-tag">
-                                    Java
-                                </span>
-                                <span class="tech-tag">
-                                    JavaFX
-                                </span>
-                            </div>
-
-                            <div class="project-links">
-                                <a href="https://github.com/JawadDeBagnolet/TicTacToe" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                    <span>Code</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="section section-bg">
-            <div class="container-lg">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text">
-                    Compétences
-                </h2>
-                <p class="text-center text-gray-400 mb-12 text-lg">
-                    Technologies et outils que je maîtrise
-                </p>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="skill-category">
-                        <div class="skill-header">
-                            <i class="fas fa-code icon-lg text-blue-400"></i>
-                            <h3 class="skill-title">Langages</h3>
-                        </div>
-
-                        <div class="space-y-4">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">PHP</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-blue" style="width: 100%" data-width="100%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">JavaScript</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-blue" style="width: 100%" data-width="100%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Java</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-blue" style="width: 100%" data-width="100%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">HTML/CSS</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-blue" style="width: 100%" data-width="100%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Python</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-blue" style="width: 100%" data-width="100%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">SQL</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-blue" style="width: 100%" data-width="100%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <div class="skill-header">
-                            <i class="fas fa-server icon-lg text-purple-400"></i>
-                            <h3 class="skill-title">Frameworks & Bibliothèques</h3>
-                        </div>
-
-                        <div class="space-y-4">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Symfony</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-purple" style="width: 100%" data-width="100%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Bootstrap</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-purple" style="width: 100%" data-width="100%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">JavaFX</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-purple" style="width: 100%" data-width="100%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <div class="skill-header">
-                            <i class="fas fa-database icon-lg text-pink-400"></i>
-                            <h3 class="skill-title">Bases de Données</h3>
-                        </div>
-
-                        <div class="space-y-4">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">MySQL</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-pink" style="width: 100%" data-width="100%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">MariaDB</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-pink" style="width: 100%" data-width="100%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <div class="skill-header">
-                            <i class="fas fa-tools icon-lg text-green-400"></i>
-                            <h3 class="skill-title">Outils & Technologies</h3>
-                        </div>
-
-                        <div class="space-y-4">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Git/GitHub</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-green" style="width: 100%" data-width="100%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">WordPress</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill progress-green" style="width: 100%" data-width="100%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tech Watch Section -->
-        <section id="techwatch" class="section">
-            <div class="container-lg">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text">
-                    Veille Technologique
-                </h2>
-                <p class="text-center text-gray-400 mb-12 text-lg">
-                    Articles et actualités sur les technologies émergentes
-                </p>
-
-                <div class="flex justify-center">
-                    <div class="project-card max-w-md">
-                        <div class="project-image">
-                            <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800" alt="L'IA dans le Développement">
-                            <div class="project-year">
-                                Intelligence Artificielle
-                            </div>
-                        </div>
-
-                        <div class="project-content">
-                            <div class="flex items-center space-x-2 text-gray-400 text-sm mb-3">
-                                <i class="fas fa-calendar icon"></i>
-                                <span>15 Mars 2024</span>
-                            </div>
-
-                            <h3 class="project-title">
-                                L'IA dans le Développement
-                            </h3>
-
-                            <p class="project-description">Comment l'intelligence artificielle révolutionne le développement logiciel et améliore la productivité des développeurs.</p>
-
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="tag tag-purple">
-                                    IA
-                                </span>
-                                <span class="tag tag-purple">
-                                    Développement
-                                </span>
-                                <span class="tag tag-purple">
-                                    Productivité
-                                </span>
-                            </div>
-
-                            <a href="https://www.artificialintelligence-news.com/" target="_blank" rel="noopener noreferrer" class="project-link">
-                                <span>Articles les plus récents</span>
-                                <i class="fas fa-arrow-right"></i>
+                        <div class="about-links">
+                            <a href="https://github.com/JawadDeBagnolet/" target="_blank" rel="noopener" class="text-link">
+                                <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/jawad-aouzal-124891342/" target="_blank" rel="noopener" class="text-link">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
                             </a>
                         </div>
                     </div>
+
+                    <div class="about-stats">
+                        <div class="stat reveal" data-delay="50">
+                            <span class="stat-n">6</span>
+                            <span class="stat-l">Projets réalisés</span>
+                        </div>
+                        <div class="stat reveal" data-delay="100">
+                            <span class="stat-n">6</span>
+                            <span class="stat-l">Langages maîtrisés</span>
+                        </div>
+                        <div class="stat reveal" data-delay="150">
+                            <span class="stat-n">3</span>
+                            <span class="stat-l">Langues parlées</span>
+                        </div>
+                        <div class="stat reveal" data-delay="200">
+                            <span class="stat-n">2</span>
+                            <span class="stat-l">Années de formation</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- CV Section -->
-        <section id="cv" class="section section-bg">
+        <!-- ═══════════════════════════ FORMATION ═══════════════════════════ -->
+        <section class="section section-alt" id="formation">
             <div class="container">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text">
-                    Curriculum Vitae
-                </h2>
-                <p class="text-center text-gray-400 mb-8 text-lg">
-                    Mon parcours professionnel et académique
-                </p>
+                <header class="section-header reveal">
+                    <span class="section-num">02</span>
+                    <h2 class="section-title">Formation</h2>
+                </header>
 
-                <div class="text-center mb-12">
-                    <a href="CV AOUZAL-Jawad.pdf" download="CV_AOUZAL_Jawad.pdf" class="btn btn-secondary">
-                        <i class="fas fa-download"></i>
-                        <span>Télécharger le CV</span>
-                    </a>
+                <div class="timeline">
+                    <article class="timeline-item reveal">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">2024 — 2026</span>
+                        </div>
+                        <div class="timeline-body">
+                            <h3>BTS SIO SLAM</h3>
+                            <p class="timeline-sub">Services Informatiques aux Organisations — Solutions Logicielles et Applications Métiers</p>
+                            <p>Formation en développement d'applications web et logicielles, gestion de bases de données, architecture logicielle et conduite de projets.</p>
+                            <div class="pill-list">
+                                <span class="pill">Développement web</span>
+                                <span class="pill">Développement applicatif</span>
+                                <span class="pill">Bases de données</span>
+                                <span class="pill">Architecture logicielle</span>
+                                <span class="pill">Gestion de projet</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item reveal" data-delay="80">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">2021 — 2024</span>
+                        </div>
+                        <div class="timeline-body">
+                            <h3>Baccalauréat Général</h3>
+                            <p class="timeline-sub">Spécialisation scientifique</p>
+                            <p>Formation générale avec spécialisation en sciences exactes.</p>
+                            <div class="pill-list">
+                                <span class="pill">Mathématiques</span>
+                                <span class="pill">Physique-Chimie</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════ PROJETS ═══════════════════════════ -->
+        <section class="section section-dark" id="projets">
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="section-num section-num-light">03</span>
+                    <h2 class="section-title section-title-light">Réalisations</h2>
+                </header>
+
+                <div class="projects-list">
+
+                    <article class="project-row reveal" data-delay="0">
+                        <div class="project-row-head">
+                            <span class="project-num">01</span>
+                            <h3 class="project-name">Site du LPRS</h3>
+                            <span class="project-tag">Groupe</span>
+                            <span class="project-year">2025</span>
+                            <a href="https://github.com/Redalak/tp-lprs" target="_blank" rel="noopener" class="project-arrow" aria-label="Voir sur GitHub">
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="project-row-body">
+                            <div class="project-body-inner">
+                                <p>Site web développé en groupe pour le Lycée Privé Robert Schumann (LPRS). Développement en PHP natif, sans framework, pages dynamiques et gestion de contenu.</p>
+                                <div class="tech-pills">
+                                    <span>PHP</span><span>HTML / CSS</span><span>JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-row reveal" data-delay="60">
+                        <div class="project-row-head">
+                            <span class="project-num">02</span>
+                            <h3 class="project-name">Application Infirmerie LPRS</h3>
+                            <span class="project-tag">Desktop</span>
+                            <span class="project-year">2026</span>
+                            <a href="https://github.com/JawadDeBagnolet/hsp" target="_blank" rel="noopener" class="project-arrow" aria-label="Voir sur GitHub">
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="project-row-body">
+                            <div class="project-body-inner">
+                                <p>Application desktop JavaFX destinée à l'infirmerie du Lycée Privé Robert Schumann. Gestion des passages d'élèves, suivi des soins et historique des consultations.</p>
+                                <div class="tech-pills">
+                                    <span>Java</span><span>JavaFX</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-row reveal" data-delay="120">
+                        <div class="project-row-head">
+                            <span class="project-num">03</span>
+                            <h3 class="project-name">Site de Gestion de Cinéma</h3>
+                            <span class="project-tag">Full Stack</span>
+                            <span class="project-year">2025</span>
+                            <a href="https://github.com/JawadDeBagnolet/cinema_projet_A_B_L_O" target="_blank" rel="noopener" class="project-arrow" aria-label="Voir sur GitHub">
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="project-row-body">
+                            <div class="project-body-inner">
+                                <p>Application complète de gestion de cinéma avec système de réservation en ligne. Architecture MVC avec Symfony, gestion des séances, salles et utilisateurs.</p>
+                                <div class="tech-pills">
+                                    <span>Symfony</span><span>PHP</span><span>MySQL</span><span>Bootstrap</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-row reveal" data-delay="180">
+                        <div class="project-row-head">
+                            <span class="project-num">04</span>
+                            <h3 class="project-name">Gestion de Vols</h3>
+                            <span class="project-tag">Full Stack</span>
+                            <span class="project-year">2025</span>
+                            <a href="https://github.com/JawadDeBagnolet/tpVol" target="_blank" rel="noopener" class="project-arrow" aria-label="Voir sur GitHub">
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="project-row-body">
+                            <div class="project-body-inner">
+                                <p>Système de gestion et réservation de vols. Interface de recherche, sélection de sièges et gestion des passagers en base de données.</p>
+                                <div class="tech-pills">
+                                    <span>PHP</span><span>SQL</span><span>Bootstrap</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════ COMPÉTENCES ═══════════════════════════ -->
+        <section class="section" id="competences">
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="section-num">04</span>
+                    <h2 class="section-title">Stack technique</h2>
+                </header>
+
+                <div class="skills-grid">
+                    <div class="skill-group reveal">
+                        <h3 class="skill-group-label">Langages</h3>
+                        <div class="skill-items">
+                            <span class="skill-item skill-primary">PHP</span>
+                            <span class="skill-item skill-primary">JavaScript</span>
+                            <span class="skill-item skill-primary">Java</span>
+                            <span class="skill-item skill-primary">HTML / CSS</span>
+                            <span class="skill-item">Python</span>
+                            <span class="skill-item">SQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-group reveal" data-delay="80">
+                        <h3 class="skill-group-label">Frameworks & Librairies</h3>
+                        <div class="skill-items">
+                            <span class="skill-item skill-primary">Symfony</span>
+                            <span class="skill-item skill-primary">Bootstrap</span>
+                            <span class="skill-item skill-primary">JavaFX</span>
+                        </div>
+                    </div>
+                    <div class="skill-group reveal" data-delay="160">
+                        <h3 class="skill-group-label">Bases de données</h3>
+                        <div class="skill-items">
+                            <span class="skill-item skill-primary">MySQL</span>
+                            <span class="skill-item">MariaDB</span>
+                        </div>
+                    </div>
+                    <div class="skill-group reveal" data-delay="240">
+                        <h3 class="skill-group-label">Outils</h3>
+                        <div class="skill-items">
+                            <span class="skill-item skill-primary">Git / GitHub</span>
+                            <span class="skill-item">WordPress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════ VEILLE ═══════════════════════════ -->
+        <section class="section section-alt" id="veille">
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="section-num">05</span>
+                    <h2 class="section-title">Veille technologique</h2>
+                </header>
+
+                <div class="veille-intro reveal">
+                    <p>Sujet de veille : <strong>l'intelligence artificielle dans le développement logiciel.</strong> L'IA redéfinit les pratiques — génération de code, agents autonomes, revue automatisée — et transforme les compétences attendues des développeurs.</p>
                 </div>
 
-                <!-- Tableau de Synthèse -->
-                <div class="card mb-12">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <i class="fas fa-table icon-lg text-green-400"></i>
-                        <h3 class="text-2xl font-semibold text-white">Tableau de Synthèse</h3>
-                    </div>
+                <div class="veille-grid">
 
-                    <div class="text-center">
-                        <p class="text-gray-300 mb-6">
-                            Résumé visuel de mon profil et compétences clés
-                        </p>
-                        <a href="E5%20-%20Tableau%20de%20synthèse%20AOUZAL%20Jawad.xlsx" download="E5 - Tableau de synthèse AOUZAL Jawad.xlsx" class="btn btn-primary">
-                            <i class="fas fa-download"></i>
-                            <span>Télécharger le tableau</span>
+                    <article class="veille-article reveal" data-delay="0">
+                        <div class="veille-article-head">
+                            <span class="veille-source">Blog du Modérateur</span>
+                            <span class="veille-year">2025</span>
+                        </div>
+                        <h3>Comment les développeurs utilisent l'IA en 2025</h3>
+                        <p>91 % des équipes intègrent l'IA dans leur workflow. 80 % des développeurs constatent un gain de productivité, 59 % une amélioration de la qualité du code — d'après une étude JetBrains.</p>
+                        <div class="pill-list">
+                            <span class="pill">IA</span>
+                            <span class="pill">Étude</span>
+                            <span class="pill">Productivité</span>
+                        </div>
+                        <a href="https://www.blogdumoderateur.com/comment-developpeurs-utilisent-ia-2025/" target="_blank" rel="noopener" class="veille-link">
+                            Lire l'article <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
                         </a>
-                    </div>
+                    </article>
+
+                    <article class="veille-article reveal" data-delay="80">
+                        <div class="veille-article-head">
+                            <span class="veille-source">IT Social</span>
+                            <span class="veille-year">2025</span>
+                        </div>
+                        <h3>L'avènement des agents IA redéfinit les rôles dans les équipes de développement</h3>
+                        <p>Les agents IA autonomes deviennent de nouveaux outils structurants pour le développement applicatif, redistribuant les responsabilités au sein des équipes techniques.</p>
+                        <div class="pill-list">
+                            <span class="pill">Agents IA</span>
+                            <span class="pill">Équipes</span>
+                            <span class="pill">Métier</span>
+                        </div>
+                        <a href="https://itsocial.fr/intelligence-artificielle/intelligence-artificielle-articles/lavenement-des-agents-ia-redefinit-les-roles-dans-les-equipes-de-developpement/" target="_blank" rel="noopener" class="veille-link">
+                            Lire l'article <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                    </article>
+
+                    <article class="veille-article reveal" data-delay="160">
+                        <div class="veille-article-head">
+                            <span class="veille-source">IT Social</span>
+                            <span class="veille-year">2025</span>
+                        </div>
+                        <h3>Comment l'IA redéfinit la création de logiciels et les rôles au sein des équipes</h3>
+                        <p>Assistants intelligents, plateformes low-code et agents autonomes marquent un tournant dans le cycle de vie du logiciel, de la conception au déploiement.</p>
+                        <div class="pill-list">
+                            <span class="pill">Low-code</span>
+                            <span class="pill">Logiciel</span>
+                            <span class="pill">Automatisation</span>
+                        </div>
+                        <a href="https://itsocial.fr/logiciel-agilite/logiciel-agilite-articles/comment-lia-redefinit-la-creation-de-logiciels-et-les-roles-au-sein-des-equipes/" target="_blank" rel="noopener" class="veille-link">
+                            Lire l'article <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                    </article>
+
+                    <article class="veille-article reveal" data-delay="240">
+                        <div class="veille-article-head">
+                            <span class="veille-source">Blog du Modérateur</span>
+                            <span class="veille-year">2025</span>
+                        </div>
+                        <h3>Un seul développeur peut piloter une constellation d'agents de code</h3>
+                        <p>À l'ère de l'IA, le développeur devient architecte et auditeur : il supervise des agents qui génèrent, testent et déploient le code. Le métier se transforme en profondeur.</p>
+                        <div class="pill-list">
+                            <span class="pill">IA</span>
+                            <span class="pill">Code</span>
+                            <span class="pill">Avenir du métier</span>
+                        </div>
+                        <a href="https://www.blogdumoderateur.com/ia-copilote-code-developpement-web-nouvelle-ere/" target="_blank" rel="noopener" class="veille-link">
+                            Lire l'article <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                    </article>
+
                 </div>
-
-                <div class="space-y-8">
-                    <div class="card">
-                        <div class="flex items-center space-x-3 mb-6">
-                            <i class="fas fa-briefcase icon-lg text-blue-400"></i>
-                            <h3 class="text-2xl font-semibold text-white">Expérience Professionnelle</h3>
-                        </div>
-
-                        <div class="space-y-6">
-                            <div style="border-left: 2px solid #3b82f6; padding-left: 1.5rem;">
-                                <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
-                                    <div>
-                                        <h4 class="text-xl font-semibold text-white">Stage Développeur Full Stack</h4>
-                                        <p class="text-gray-300">Entreprise Tech</p>
-                                    </div>
-                                    <span class="text-gray-400 text-sm mt-1 md:mt-0">Juin 2024 - Août 2024</span>
-                                </div>
-                                <p class="text-gray-400 mb-3">Développement d'applications web avec Symfony et React. Participation à des projets clients et amélioration des performances.</p>
-                                <ul class="space-y-1">
-                                    <li class="text-gray-300 text-sm flex items-start">
-                                        <span class="text-blue-400 mr-2">•</span>
-                                        Développement de 3 fonctionnalités majeures
-                                    </li>
-                                    <li class="text-gray-300 text-sm flex items-start">
-                                        <span class="text-blue-400 mr-2">•</span>
-                                        Optimisation des performances de 40%
-                                    </li>
-                                    <li class="text-gray-300 text-sm flex items-start">
-                                        <span class="text-blue-400 mr-2">•</span>
-                                        Mise en place de tests unitaires
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div style="border-left: 2px solid #3b82f6; padding-left: 1.5rem;">
-                                <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
-                                    <div>
-                                        <h4 class="text-xl font-semibold text-white">Projets Académiques</h4>
-                                        <p class="text-gray-300">BTS SIO SLAM</p>
-                                    </div>
-                                    <span class="text-gray-400 text-sm mt-1 md:mt-0">2024 - Présent</span>
-                                </div>
-                                <p class="text-gray-400 mb-3">Réalisation de projets divers dans le cadre de la formation BTS SIO option SLAM.</p>
-                                <ul class="space-y-1">
-                                    <li class="text-gray-300 text-sm flex items-start">
-                                        <span class="text-blue-400 mr-2">•</span>
-                                        Développement d'applications web et desktop
-                                    </li>
-                                    <li class="text-gray-300 text-sm flex items-start">
-                                        <span class="text-blue-400 mr-2">•</span>
-                                        Travail en équipe sur des projets collaboratifs
-                                    </li>
-                                    <li class="text-gray-300 text-sm flex items-start">
-                                        <span class="text-blue-400 mr-2">•</span>
-                                        Présentation de projets devant un jury
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="card">
-                            <div class="flex items-center space-x-3 mb-6">
-                                <i class="fas fa-language icon-lg text-purple-400"></i>
-                                <h3 class="text-2xl font-semibold text-white">Langues</h3>
-                            </div>
-
-                            <div class="space-y-4">
-                                <div>
-                                    <div class="flex justify-between mb-1">
-                                        <span class="text-gray-300 font-medium">Français</span>
-                                    </div>
-                                    <p class="text-gray-400 text-sm">Langue maternelle</p>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between mb-1">
-                                        <span class="text-gray-300 font-medium">Anglais</span>
-                                    </div>
-                                    <p class="text-gray-400 text-sm">Niveau B2</p>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between mb-1">
-                                        <span class="text-gray-300 font-medium">Espagnol</span>
-                                    </div>
-                                    <p class="text-gray-400 text-sm">Niveau A2</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="flex items-center space-x-3 mb-6">
-                                <i class="fas fa-heart icon-lg text-pink-400"></i>
-                                <h3 class="text-2xl font-semibold text-white">Centres d'Intérêt</h3>
-                            </div>
-
-                            <div class="flex flex-wrap gap-3">
-                                <span class="tag tag-purple">
-                                    Programmation
-                                </span>
-                                <span class="tag tag-purple">
-                                    Cinéma
-                                </span>
-                                <span class="tag tag-purple">
-                                    Veille Technologique
-                                </span>
-                                <span class="tag tag-purple">
-                                    Sport
-                                </span>
-                                <span class="tag tag-purple">
-                                    Musique
-                                </span>
-                            </div>
-                        </div>
-                    </div>
             </div>
         </section>
 
-        <!-- Contactection -->
-        <section id="contact" class="section">
+        <!-- ═══════════════════════════ CV ═══════════════════════════ -->
+        <section class="section" id="cv">
             <div class="container">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text">
-                    Contact
-                </h2>
-                <p class="text-center text-gray-400 mb-12 text-lg">
-                    N'hésitez pas à me contacter pour toute question ou opportunité
-                </p>
+                <header class="section-header reveal">
+                    <span class="section-num">06</span>
+                    <h2 class="section-title">Curriculum Vitae</h2>
+                </header>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="space-y-6">
-                        <div class="card">
-                            <h3 class="text-2xl font-semibold mb-6 text-white">Informations de Contact</h3>
+                <div class="cv-layout">
+                    <div class="cv-main reveal">
+                        <h3 class="cv-sub">Expériences</h3>
 
-                            <div class="space-y-4">
-                                <div class="contact-item">
-                                    <i class="fas fa-envelope contact-icon text-blue-400"></i>
-                                    <div class="contact-details">
-                                        <h4 class="font-semibold mb-1">Email</h4>
-                                        <a href="mailto:cjawad.a@gmail.com" class="hover:text-blue-400 transition-colors">
-                                            cjawad.a@gmail.com
-                                        </a>
+                        <div class="exp-list">
+                            <article class="exp-item">
+                                <div class="exp-head">
+                                    <div class="exp-title-wrap">
+                                        <h4>Stage — Technicien Support Micro</h4>
+                                        <p class="exp-org">Dekuple</p>
                                     </div>
+                                    <span class="exp-date">Mai – Juin 2025</span>
                                 </div>
+                                <ul class="exp-bullets">
+                                    <li>Traitement de tickets et incidents matériels, logiciel et réseau</li>
+                                    <li>Gestion des comptes utilisateurs et groupes via Active Directory (droits NTFS, GPO basiques)</li>
+                                    <li>Installation, configuration et maintenance des postes sous Windows</li>
+                                </ul>
+                            </article>
 
-                                <div class="contact-item">
-                                    <i class="fas fa-phone contact-icon text-purple-400"></i>
-                                    <div class="contact-details">
-                                        <h4 class="font-semibold mb-1">Téléphone</h4>
-                                        <a href="tel:+33612082033" class="hover:text-purple-400 transition-colors">
-                                            +33 6 12 08 20 33
-                                        </a>
+                            <article class="exp-item">
+                                <div class="exp-head">
+                                    <div class="exp-title-wrap">
+                                        <h4>Projets Académiques</h4>
+                                        <p class="exp-org">BTS SIO SLAM</p>
                                     </div>
+                                    <span class="exp-date">2024 – présent</span>
                                 </div>
+                                <ul class="exp-bullets">
+                                    <li>Développement d'applications web et desktop</li>
+                                    <li>Collaboration en équipe sur des projets</li>
+                                    <li>Présentations de projets devant jury</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
 
-                                <div class="contact-item">
-                                    <i class="fas fa-map-marker-alt contact-icon text-pink-400"></i>
-                                    <div class="contact-details">
-                                        <h4 class="font-semibold mb-1">Localisation</h4>
-                                        <p class="text-gray-300">Paris, France</p>
-                                    </div>
+                    <aside class="cv-aside reveal" data-delay="100">
+                        <div class="cv-block">
+                            <h3 class="cv-sub">Documents</h3>
+                            <a href="CV_AOUZAL_Jawad.pdf" download class="dl-btn">
+                                <span class="dl-icon"><i class="fas fa-file-pdf" aria-hidden="true"></i></span>
+                                <span class="dl-info">
+                                    <strong>Curriculum Vitae</strong>
+                                    <small>PDF</small>
+                                </span>
+                                <i class="fas fa-arrow-down dl-arrow" aria-hidden="true"></i>
+                            </a>
+                            <a href="E5 - Tableau de synthèse AOUZAL Jawad.xlsx" download class="dl-btn">
+                                <span class="dl-icon dl-icon-xls"><i class="fas fa-file-excel" aria-hidden="true"></i></span>
+                                <span class="dl-info">
+                                    <strong>Tableau de synthèse E5</strong>
+                                    <small>XLSX</small>
+                                </span>
+                                <i class="fas fa-arrow-down dl-arrow" aria-hidden="true"></i>
+                            </a>
+                        </div>
+
+                        <div class="cv-block">
+                            <h3 class="cv-sub">Langues</h3>
+                            <div class="lang-list">
+                                <div class="lang-row">
+                                    <span>Français</span>
+                                    <span class="lang-level">Natif</span>
+                                </div>
+                                <div class="lang-row">
+                                    <span>Anglais</span>
+                                    <span class="lang-level">B2</span>
+                                </div>
+                                <div class="lang-row">
+                                    <span>Espagnol</span>
+                                    <span class="lang-level">A2</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="card">
-                            <h3 class="text-2xl font-semibold mb-6 text-white">Réseaux Sociaux</h3>
-
-                            <div class="social-links">
-                                <a href="https://github.com/JawadDeBagnolet/" target="_blank" rel="noopener noreferrer" class="social-link">
-                                    <div class="social-icon">
-                                        <i class="fab fa-github"></i>
-                                    </div>
-                                    <div class="social-details">
-                                        <h4 class="font-semibold">GitHub</h4>
-                                        <p class="text-sm text-gray-400">Voir mes projets</p>
-                                    </div>
-                                </a>
-
-                                <a href="https://www.linkedin.com/in/jawad-aouzal-124891342/" target="_blank" rel="noopener noreferrer" class="social-link">
-                                    <div class="social-icon">
-                                        <i class="fab fa-linkedin"></i>
-                                    </div>
-                                    <div class="social-details">
-                                        <h4 class="font-semibold">LinkedIn</h4>
-                                        <p class="text-sm text-gray-400">Mon profil professionnel</p>
-                                    </div>
-                                </a>
+                        <div class="cv-block">
+                            <h3 class="cv-sub">Centres d'intérêt</h3>
+                            <div class="pill-list">
+                                <span class="pill">Programmation</span>
+                                <span class="pill">Cinéma</span>
+                                <span class="pill">Veille tech</span>
+                                <span class="pill">Sport</span>
+                                <span class="pill">Musique</span>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="card">
-                        <h3 class="text-2xl font-semibold mb-6 text-white">Envoyez-moi un Message</h3>
-
-                        <form id="contactForm" action="https://formsubmit.co/cjawad.a@email.com" method="POST" class="space-y-4">
-                            <div class="form-group">
-                                <label for="name" class="form-label">Nom</label>
-                                <input
-                                        type="text"
-                                        id="name"
-                                        name="name"
-                                        required
-                                        class="form-input"
-                                        placeholder="Nom"
-                                />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="email" class="form-label">Email</label>
-                                <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
-                                        required
-                                        class="form-input"
-                                        placeholder="exemple@email.com"
-                                />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="subject" class="form-label">Sujet</label>
-                                <input
-                                        type="text"
-                                        id="subject"
-                                        name="_subject"
-                                        required
-                                        class="form-input"
-                                        placeholder="Objet"
-                                />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea
-                                        id="message"
-                                        name="message"
-                                        required
-                                        rows="5"
-                                        class="form-input form-textarea"
-                                        placeholder="Message..."
-                                ></textarea>
-                            </div>
-
-                            <button
-                                    type="submit"
-                                    class="btn btn-primary"
-                                    style="width: 100%;"
-                            >
-                                <i class="fas fa-paper-plane"></i>
-                                <span>Envoyer le Message</span>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="footer">
-                    <p>
-                        © 2024 Portfolio. Aouzal Jawad.
-                    </p>
+                    </aside>
                 </div>
             </div>
         </section>
-    </div>
-    <script src="script.js"></script>
+
+
+    </main>
+
+    <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span class="footer-name">Jawad Aouzal</span>
+            <span class="footer-copy">© 2025 &nbsp;·&nbsp; Développeur Full Stack &nbsp;·&nbsp; Paris</span>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
